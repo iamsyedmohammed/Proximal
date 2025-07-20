@@ -5,6 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>ProximaLMS - Home</title>
  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
  <script src="https://cdn.tailwindcss.com"></script>
  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -20,7 +21,7 @@
 <!-- Apple Touch Icon (for iOS) -->
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
 
-<link rel="stylesheet" href="/Style/home.css">
+<link rel="stylesheet" href="/Style/index.css">
  </head>
  <body class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">
  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -46,11 +47,17 @@
 
     <!-- Navigation Links (hidden on mobile) -->
 <div id="menu" class="hidden md:flex space-x-6 text-xl font-semibold text-gray-800 items-center">
-  <a href="index.html" class="hover:text-[#800000] transition-colors">Home</a>
+  <a href="/" class="hover:text-[#800000] transition-colors">Home</a>
   <a href="/Pages/about.html" class="hover:text-[#800000] transition-colors">About Us</a>
   <a href="/Pages/features.html" class="hover:text-[#800000] transition-colors">Features</a>
   <a href="/Pages/courses.html" class="hover:text-[#800000] transition-colors">Courses</a>
-  <a href="/Pages/contactus.html" class="text-white px-4 py-2 rounded hover:[#800000] transition-all" style="background-color: #800000;">Contact Us</a>
+<a href="/Pages/contactus.html" 
+   class="text-white px-4 py-2 rounded transition-all" 
+   style="background-color: #800000;"
+   onmouseover="this.style.boxShadow='0 0 15px #800000'" 
+   onmouseout="this.style.boxShadow='none'">
+   Contact Us
+</a>
 </div>
 
 
@@ -58,7 +65,7 @@
 
  <!-- Mobile Menu (dropdown style) -->
 <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-4 text-lg font-semibold">
-  <a href="/Pages/index.html" class="hover:text-[#800000] transition-colors">Home</a>
+  <a href="/" class="block text-black hover:text-[#800000]">Home</a>
   <a href="/Pages/about.html" class="block text-black hover:text-[#800000]">About Us</a>
   <a href="/Pages/features.html" class="block text-black hover:text-[#800000]">Features</a>
   <a href="/Pages/courses.html" class="block text-black hover:text-[#800000]">Courses</a>
@@ -96,9 +103,12 @@
       <p class="text-lg text-gray-300 mb-6">
         Empowering learners with hands-on, project-based courses and real industry mentorship.
       </p>
-      <a href="/Pages/courses.html" class="inline-block text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition" style="background-color: #800000;">
-        Explore Courses
-      </a>
+      <a href="/Pages/courses.html" 
+   class="inline-block text-white px-6 py-3 rounded-lg font-semibold transition duration-300 hover:shadow-[0_0_15px_#800000]" 
+   style="background-color: #800000;">
+   Explore Courses
+</a>
+
     </div>
 
     <!-- Right Image -->
@@ -160,9 +170,12 @@
     </div>
 
     <!-- Call to Action -->
-    <a href="/Pages/about.html" class="inline-block text-white hover:bg-yellow-300 font-semibold py-3 px-8 rounded-full shadow-md transition duration-300" style="background-color: #800000;">
-      Learn More About Us
-    </a>
+    <a href="/Pages/about.html" 
+   class="inline-block text-white font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 hover:shadow-[0_0_15px_#800000]" 
+   style="background-color: #800000;">
+   Learn More About Us
+</a>
+
   </div>
 </section>
 

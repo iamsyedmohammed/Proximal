@@ -3,7 +3,7 @@
  body {
  background: linear-gradient(135deg, #1a0833, #5a0a7f, #b92b68); /* Deeper, richer gradient */
  color: white;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
  min-height: 100vh; /* Ensure body takes full height for gradient */
  }
  /* Enhanced Glassmorphism effect */

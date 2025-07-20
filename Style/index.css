@@ -2,6 +2,11 @@
  html {
  scroll-behavior: smooth;
  }
+
+ body {
+  font-family: 'Poppins', sans-serif;
+}
+
  body::before {
  content: "";
  /* background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center fixed; */
@@ -29,7 +34,7 @@
  border-color: rgba(255,255,255,0.3);
  }
  .collab-hover:hover h3 {
- color: #FFD700; 
+ color: #800000; 
  transform: scale(1.1);
  }
  .popup {

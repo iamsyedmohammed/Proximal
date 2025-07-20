@@ -3,9 +3,14 @@
  body {
  background: linear-gradient(135deg, #1a0833, #5a0a7f, #b92b68); /* Deeper, richer gradient */
  color: white;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
  min-height: 100vh; /* Ensure body takes full height for gradient */
  }
+
+
+  body {
+  font-family: 'Poppins', sans-serif;
+}
 
  /* Enhanced Glassmorphism effect for cards and elements */
  .glass {
@@ -89,30 +94,4 @@
  animation: slideInDetail 0.6s ease-out forwards;
  }
 
- /* Social Icon specific styling and hover animations */
- .social-icon-link {
- display: inline-flex;
- justify-content: center;
- align-items: center;
- width: 60px;
- height: 60px;
- border-radius: 50%;
- background: rgba(255, 255, 255, 0.05); /* Light glass effect for icons */
- border: 1px solid rgba(255, 255, 255, 0.1);
- transition: all 0.3s ease-in-out;
- color: white; /* Default icon color */
- }
-
- .social-icon-link:hover {
- transform: translateY(-5px) scale(1.1); /* Lift and scale on hover */
- box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Stronger shadow */
- }
-
- .social-icon-link .fab, .social-icon-link .fas {
- font-size: 2.5rem; /* Larger icons */
- transition: all 0.3s ease-in-out;
- }
-
- .social-icon-link:hover .fab, .social-icon-link:hover .fas {
- color: #FFD700; /* Yellow glow on hover */
- }
+ 
