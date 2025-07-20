@@ -3,10 +3,10 @@
 <head>
  <meta charset="UTF-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>ProximaLMS - About Us</title>
+ <title>Features - ProximaLMS</title>
  <script src="https://cdn.tailwindcss.com"></script>
  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/Style/about.css">
+<link rel="stylesheet" href="/Style/features.css">
 </head>
 <body>
 
@@ -15,8 +15,8 @@
   <div class="flex items-center justify-between">
     <!-- Brand -->
 <!-- Brand -->
-<a href="home1.html" class="hover:opacity-80 transition-opacity">
-  <img src="Proximalms_Logo.png" alt="ProximaLMS Logo" class="h-12" />
+<a href="/index.html" class="hover:opacity-80 transition-opacity">
+  <img src="/images/Proximalms_Logo.png" alt="ProximaLMS Logo" class="h-12" />
 </a>
 
 
@@ -28,7 +28,7 @@
 
     <!-- Navigation Links (hidden on mobile) -->
 <div id="menu" class="hidden md:flex space-x-6 text-xl font-semibold text-gray-800 items-center">
-    <a href="home1.html" class="hover:text-[#800000] transition-colors">Home</a>
+  <a href="/index.html" class="hover:text-[#800000] transition-colors">Home</a>
   <a href="about.html" class="hover:text-[#800000] transition-colors">About Us</a>
   <a href="features.html" class="hover:text-[#800000] transition-colors">Features</a>
   <a href="courses.html" class="hover:text-[#800000] transition-colors">Courses</a>
@@ -40,11 +40,11 @@
 
  <!-- Mobile Menu (dropdown style) -->
 <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-4 text-lg font-semibold">
-    <a href="home1.html" class="hover:text-[#800000] transition-colors">Home</a>
+  <a href="/index.html" class="hover:text-[#800000] transition-colors">Home</a>
   <a href="about.html" class="block text-black hover:text-[#800000]">About Us</a>
   <a href="features.html" class="block text-black hover:text-[#800000]">Features</a>
   <a href="courses.html" class="block text-black hover:text-[#800000]">Courses</a>
-  <a href="contactus.html" class="block text-black hover:text-[#800000]">Contact Us</a>
+  <a href="contactus.html" class="block text-black hover:text-yellow-600">Contact Us</a>
 </div>
 
 </nav>
@@ -64,7 +64,7 @@
 
   <!-- Background Image -->
   <img 
-    src="/assets_task_01k0kr03t2etm8vzhr5czf6v8e_1753009461_img_0.webp" 
+    src="/images/Herosectionbg.webp" 
     alt="About Us Background" 
     class="absolute top-0 left-0 w-full h-full object-cover opacity-80"
   />
@@ -74,73 +74,91 @@
 
   <!-- Foreground Text Content -->
   <div class="relative z-10 text-left px-6 md:px-20">
-    <h1 class="text-3xl md:text-4xl font-bold text-[#F4CACA] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">About ProximaLMS</h1>
+    <h1 class="text-3xl md:text-4xl font-bold text-[#F4CACA] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">Our Features</h1>
     <!-- Optional: Add description here -->
-    <!-- <p class="mt-2 text-base md:text-lg text-gray-200">Learn more about our mission, values, and team.</p> -->
+    <p class="mt-2 text-base md:text-lg text-gray-200">Unlocking Your Potential with Advanced Learning Tools</p>
   </div>
 
 </section>
 
-
-
-<!-- About Us Hero Section -->
-<header class="py-10 text-center">
-  <h1 class="text-4xl md:text-6xl font-extrabold text-[#800000] drop-shadow-lg bounce-in">
-    About ProximaLMS
+<!-- Features Hero Section -->
+<header class="py-4 text-center">
+  <h1 class="text-4xl md:text-7xl font-extrabold text-[#800000] drop-shadow-lg bounce-in">
+    Our Features
   </h1>
-  <p class="text-lg md:text-2xl text-white mt-2 md:mt-4 max-w-2xl mx-auto scroll-animate">
-    Your Gateway to Job-Ready, Real-World Learning
+  <p class="text-lg md:text-3xl text-white mt-4 max-w-4xl mx-auto scroll-animate">
+    Unlocking Your Potential with Advanced Learning Tools
   </p>
 </header>
 
 
- <!-- Main Content Section -->
- <section class="px-6">
- <div class="max-w-5xl mx-auto glass p-10 rounded-2xl shadow-xl scroll-animate">
- <div class="text-left space-y-6 text-lg">
- <p>
- ProximaLMS is a future-forward Learning Management System (LMS) designed to bridge academia with critical industry needs. We are dedicated to empowering individuals with the skills and knowledge required for the modern workforce.
- </p>
- <p>
- Whether you're a student aiming to upskill, a professional seeking to reskill for new opportunities, or an educator looking to enhance your course offerings, ProximaLMS provides meticulously curated, hands-on, and project-based content.
- </p>
- <p>
- Our mission is clear: to make impactful learning accessible, collaborative, and genuinely engaging. We achieve this by fostering a dynamic learning environment, supported by strategic partnerships with global industry leaders.
- </p>
- </div>
- </div>
- </section>
+ <!-- Features Grid Section -->
+ <section class="px-6 py-12">
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
 
- <!-- Key Features/Pillars Section -->
- <section class="px-6 py-16">
- <h2 class="text-5xl font-extrabold text-center mb-12 text-white scroll-animate">Our Core Pillars</h2>
- <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto text-center">
- <!-- Pillar 1 -->
- <div class="glass p-8 rounded-2xl shadow-lg flex flex-col items-center justify-center scroll-animate">
- <i class="fas fa-flask text-5xl text-[#800000] mb-4"></i>
+ <!-- Feature 1: Live Mentorship -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-chalkboard-teacher text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Live Mentorship</h3>
+ <p class="text-gray-200">Get one-on-one sessions with industry experts and clarify real-world doubts as you progress through projects.</p>
+ </div>
+
+ <!-- Feature 2: Job-Ready Tracks -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-briefcase text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Job-Ready Tracks</h3>
+ <p class="text-gray-200">All courses are designed to make you job-ready with real company-like tasks and capstone projects.</p>
+ </div>
+
+ <!-- Feature 3: Community Collaboration -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-users text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Community Collaboration</h3>
+ <p class="text-gray-200">Join an active learner community to share projects, get feedback, and collaborate on ideas.</p>
+ </div>
+
+ <!-- Feature 4: Hands-On Labs -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-code text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Hands-On Labs</h3>
+ <p class="text-gray-200">Built-in coding environments for Python, SQL, and Web Dev let you code and test directly inside your browser.</p>
+ </div>
+
+ <!-- Feature 5: Skill Tracking -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-chart-line text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Skill Tracking</h3>
+ <p class="text-gray-200">Progress dashboards, badges, and automated reviews help you stay on track and recognize achievements.</p>
+ </div>
+
+ <!-- Feature 6: Project-Based Learning -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-laptop-code text-[#800000] text-5xl mb-4"></i>
  <h3 class="text-2xl font-semibold mb-2">Project-Based Learning</h3>
- <p class="text-base text-gray-200">
- Every course is designed around real-world projects, ensuring that you gain practical, applicable skills and concrete portfolio pieces.
- </p>
+ <p class="text-gray-200">Every module ends with a mini-project to apply skills, with guidance and auto-evaluation tools.</p>
  </div>
 
- <!-- Pillar 2 -->
- <div class="glass p-8 rounded-2xl shadow-lg flex flex-col items-center justify-center scroll-animate">
- <i class="fas fa-users-gear text-5xl text-[#800000] mb-4"></i>
- <h3 class="text-2xl font-semibold mb-2">Industry Mentorship</h3>
- <p class="text-base text-gray-200">
- Learn directly from top professionals and experts in their fields who provide invaluable insights, guidance, and real-world context.
- </p>
+ <!-- Feature 7: Certifications -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-award text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Certifications</h3>
+ <p class="text-gray-200">Earn verifiable, industry-recognized certificates you can showcase on your resume and LinkedIn.</p>
  </div>
 
- <!-- Pillar 3 -->
- <div class="glass p-8 rounded-2xl shadow-lg flex flex-col items-center justify-center scroll-animate">
- <i class="fas fa-lightbulb text-5xl text-[#800000] mb-4"></i>
- <h3 class="text-2xl font-semibold mb-2">Smart LMS System</h3>
- <p class="text-base text-gray-200">
- Our intuitive and intelligent LMS tracks your progress, provides personalized feedback, and makes accessing all learning materials seamless.
- </p>
+ <!-- Feature 8: Flexible Learning Schedule -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-calendar-check text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Flexible Learning Schedule</h3>
+ <p class="text-gray-200">Learn at your own pace with the ability to revisit material, pause progress, and resume where you left off.</p>
  </div>
+
+ <!-- Feature 9: Interactive Simulations -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-vr-cardboard text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Interactive Simulations</h3>
+ <p class="text-gray-200">Explore gamified and VR-based learning tools for real-time industry challenges.</p>
+ </div>
+
  </div>
  </section>
 
@@ -150,7 +168,7 @@
 
     <!-- Logo & Description -->
     <div>
-  <img src="/Proximalms_Logo.png" alt="ProximaLMS Logo" class="h-10 mb-4" />
+  <img src="/images/Proximalms_Logo.png" alt="ProximaLMS Logo" class="h-10 mb-4" />
   
   <p class="text-gray-400">
     Bridging the gap between academia and industry with project-based, mentor-driven, real-world learning experiences.
@@ -211,6 +229,8 @@
   </div>
 </footer>
 
- <script src="/Scripts/about.js"></script>
+ <!-- JavaScript for staggered scroll-animate (Intersection Observer) -->
+  <script src="/Scripts/features.js"></script>
+
 </body>
 </html>
