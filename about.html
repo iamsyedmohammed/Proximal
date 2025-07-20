@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>ProximaLMS - About Us</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/Style/about.css">
+</head>
+<body>
+
+<!-- Navigation Bar (Responsive) -->
+<nav class="bg-[#f8f6ff] sticky top-0 z-50 p-6 shadow-md">
+  <div class="flex items-center justify-between">
+    <!-- Brand -->
+<!-- Brand -->
+<a href="home1.html" class="hover:opacity-80 transition-opacity">
+  <img src="Proximalms_Logo.png" alt="ProximaLMS Logo" class="h-12" />
+</a>
+
+
+
+    <!-- Hamburger Button (mobile only) -->
+    <button id="menu-btn" class="text-[#800000] md:hidden text-4xl focus:outline-none">
+      &#9776;
+    </button>
+
+    <!-- Navigation Links (hidden on mobile) -->
+<div id="menu" class="hidden md:flex space-x-6 text-xl font-semibold text-gray-800 items-center">
+    <a href="home1.html" class="hover:text-[#800000] transition-colors">Home</a>
+  <a href="about.html" class="hover:text-[#800000] transition-colors">About Us</a>
+  <a href="features.html" class="hover:text-[#800000] transition-colors">Features</a>
+  <a href="courses.html" class="hover:text-[#800000] transition-colors">Courses</a>
+  <a href="contactus.html" class="bg-[#800000] text-white px-4 py-2 rounded hover:bg-[#800000] transition-all">Contact Us</a>
+</div>
+
+
+  </div>
+
+ <!-- Mobile Menu (dropdown style) -->
+<div id="mobile-menu" class="md:hidden hidden mt-4 space-y-4 text-lg font-semibold">
+    <a href="home1.html" class="hover:text-[#800000] transition-colors">Home</a>
+  <a href="about.html" class="block text-black hover:text-[#800000]">About Us</a>
+  <a href="features.html" class="block text-black hover:text-[#800000]">Features</a>
+  <a href="courses.html" class="block text-black hover:text-[#800000]">Courses</a>
+  <a href="contactus.html" class="block text-black hover:text-[#800000]">Contact Us</a>
+</div>
+
+</nav>
+
+<!-- JS to toggle menu -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+<section class="relative w-full h-[40vh] md:h-[50vh] flex items-center bg-black text-white overflow-hidden">
+
+  <!-- Background Image -->
+  <img 
+    src="/assets_task_01k0kr03t2etm8vzhr5czf6v8e_1753009461_img_0.webp" 
+    alt="About Us Background" 
+    class="absolute top-0 left-0 w-full h-full object-cover opacity-80"
+  />
+
+  <!-- Overlay for readability -->
+  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+
+  <!-- Foreground Text Content -->
+  <div class="relative z-10 text-left px-6 md:px-20">
+    <h1 class="text-3xl md:text-4xl font-bold text-[#F4CACA] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">About ProximaLMS</h1>
+    <!-- Optional: Add description here -->
+    <!-- <p class="mt-2 text-base md:text-lg text-gray-200">Learn more about our mission, values, and team.</p> -->
+  </div>
+
+</section>
+
+
+
+<!-- About Us Hero Section -->
+<header class="py-10 text-center">
+  <h1 class="text-4xl md:text-6xl font-extrabold text-[#800000] drop-shadow-lg bounce-in">
+    About ProximaLMS
+  </h1>
+  <p class="text-lg md:text-2xl text-white mt-2 md:mt-4 max-w-2xl mx-auto scroll-animate">
+    Your Gateway to Job-Ready, Real-World Learning
+  </p>
+</header>
+
+
+ <!-- Main Content Section -->
+ <section class="px-6">
+ <div class="max-w-5xl mx-auto glass p-10 rounded-2xl shadow-xl scroll-animate">
+ <div class="text-left space-y-6 text-lg">
+ <p>
+ ProximaLMS is a future-forward Learning Management System (LMS) designed to bridge academia with critical industry needs. We are dedicated to empowering individuals with the skills and knowledge required for the modern workforce.
+ </p>
+ <p>
+ Whether you're a student aiming to upskill, a professional seeking to reskill for new opportunities, or an educator looking to enhance your course offerings, ProximaLMS provides meticulously curated, hands-on, and project-based content.
+ </p>
+ <p>
+ Our mission is clear: to make impactful learning accessible, collaborative, and genuinely engaging. We achieve this by fostering a dynamic learning environment, supported by strategic partnerships with global industry leaders.
+ </p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Key Features/Pillars Section -->
+ <section class="px-6 py-16">
+ <h2 class="text-5xl font-extrabold text-center mb-12 text-white scroll-animate">Our Core Pillars</h2>
+ <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto text-center">
+ <!-- Pillar 1 -->
+ <div class="glass p-8 rounded-2xl shadow-lg flex flex-col items-center justify-center scroll-animate">
+ <i class="fas fa-flask text-5xl text-[#800000] mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Project-Based Learning</h3>
+ <p class="text-base text-gray-200">
+ Every course is designed around real-world projects, ensuring that you gain practical, applicable skills and concrete portfolio pieces.
+ </p>
+ </div>
+
+ <!-- Pillar 2 -->
+ <div class="glass p-8 rounded-2xl shadow-lg flex flex-col items-center justify-center scroll-animate">
+ <i class="fas fa-users-gear text-5xl text-[#800000] mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Industry Mentorship</h3>
+ <p class="text-base text-gray-200">
+ Learn directly from top professionals and experts in their fields who provide invaluable insights, guidance, and real-world context.
+ </p>
+ </div>
+
+ <!-- Pillar 3 -->
+ <div class="glass p-8 rounded-2xl shadow-lg flex flex-col items-center justify-center scroll-animate">
+ <i class="fas fa-lightbulb text-5xl text-[#800000] mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Smart LMS System</h3>
+ <p class="text-base text-gray-200">
+ Our intuitive and intelligent LMS tracks your progress, provides personalized feedback, and makes accessing all learning materials seamless.
+ </p>
+ </div>
+ </div>
+ </section>
+
+<!-- Footer -->
+<footer class="bg-black text-white pt-12 px-6 md:px-20">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <!-- Logo & Description -->
+    <div>
+  <img src="/Proximalms_Logo.png" alt="ProximaLMS Logo" class="h-10 mb-4" />
+  
+  <p class="text-gray-400">
+    Bridging the gap between academia and industry with project-based, mentor-driven, real-world learning experiences.
+  </p>
+</div>
+
+
+    <!-- Navigation -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+      <ul class="space-y-3 text-gray-400">
+        <li><a href="courses.html" class="hover:text-[#800000] transition-colors"><i class="fas fa-book mr-2"></i>Courses</a></li>
+        <li><a href="about.html" class="hover:text-[#800000] transition-colors"><i class="fas fa-users mr-2"></i>About Us</a></li>
+        <li><a href="features.html" class="hover:text-[#800000] transition-colors"><i class="fas fa-star mr-2"></i>Features</a></li>
+        <li><a href="contactus.html" class="hover:text-[#800000] transition-colors"><i class="fas fa-envelope mr-2"></i>Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info + Social Media (Right side) -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+    <ul class="space-y-3 text-gray-400 mb-6">
+  <li>
+    <i class="fas fa-map-marker-alt text-[#800000] mr-2"></i>
+    <a href="https://www.google.com/maps/search/123+Innovation+Street,+Hyderabad,+India" target="_blank" class="hover:text-[#800000]">
+      123 Innovation Street, Hyderabad, India
+    </a>
+  </li>
+  <li>
+    <i class="fas fa-phone text-[#800000] mr-2"></i>
+    <a href="tel:+919876543210" class="hover:text-[#800000]">
+      +91 98765 43210
+    </a>
+  </li>
+  <li>
+    <i class="fas fa-envelope text-[#800000] mr-2"></i>
+    <a href="mailto:support@proximalms.com" class="hover:text-[#800000]">
+      support@proximalms.com
+    </a>
+  </li>
+</ul>
+
+
+      
+      <div class="flex space-x-4 text-xl text-gray-400">
+        <a href="#" class="hover:text-[#800000] transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-[#800000] transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-[#800000] transition"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="hover:text-[#800000] transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-[#800000] transition"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
+    &copy; 2025 ProximaLMS. All rights reserved.
+  </div>
+</footer>
+
+ <script src="/Scripts/about.js"></script>
+</body>
+</html>

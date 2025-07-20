@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Features - ProximaLMS</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/Style/features.css">
+</head>
+<body>
+
+<!-- Navigation Bar (Responsive) -->
+<nav class="bg-[#f8f6ff] sticky top-0 z-50 p-6 shadow-md">
+  <div class="flex items-center justify-between">
+    <!-- Brand -->
+<!-- Brand -->
+<a href="home1.html" class="hover:opacity-80 transition-opacity">
+  <img src="Proximalms_Logo.png" alt="ProximaLMS Logo" class="h-12" />
+</a>
+
+
+
+    <!-- Hamburger Button (mobile only) -->
+    <button id="menu-btn" class="text-[#800000] md:hidden text-4xl focus:outline-none">
+      &#9776;
+    </button>
+
+    <!-- Navigation Links (hidden on mobile) -->
+<div id="menu" class="hidden md:flex space-x-6 text-xl font-semibold text-gray-800 items-center">
+  <a href="home1.html" class="hover:text-[#800000] transition-colors">Home</a>
+  <a href="about.html" class="hover:text-[#800000] transition-colors">About Us</a>
+  <a href="features.html" class="hover:text-[#800000] transition-colors">Features</a>
+  <a href="courses.html" class="hover:text-[#800000] transition-colors">Courses</a>
+  <a href="contactus.html" class="bg-[#800000] text-white px-4 py-2 rounded hover:bg-[#800000] transition-all">Contact Us</a>
+</div>
+
+
+  </div>
+
+ <!-- Mobile Menu (dropdown style) -->
+<div id="mobile-menu" class="md:hidden hidden mt-4 space-y-4 text-lg font-semibold">
+  <a href="home1.html" class="hover:text-[#800000] transition-colors">Home</a>
+  <a href="about.html" class="block text-black hover:text-[#800000]">About Us</a>
+  <a href="features.html" class="block text-black hover:text-[#800000]">Features</a>
+  <a href="courses.html" class="block text-black hover:text-[#800000]">Courses</a>
+  <a href="contactus.html" class="block text-black hover:text-yellow-600">Contact Us</a>
+</div>
+
+</nav>
+
+<!-- JS to toggle menu -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+<section class="relative w-full h-[40vh] md:h-[50vh] flex items-center bg-black text-white overflow-hidden">
+
+  <!-- Background Image -->
+  <img 
+    src="/assets_task_01k0kr03t2etm8vzhr5czf6v8e_1753009461_img_0.webp" 
+    alt="About Us Background" 
+    class="absolute top-0 left-0 w-full h-full object-cover opacity-80"
+  />
+
+  <!-- Overlay for readability -->
+  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+
+  <!-- Foreground Text Content -->
+  <div class="relative z-10 text-left px-6 md:px-20">
+    <h1 class="text-3xl md:text-4xl font-bold text-[#F4CACA] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">Our Features</h1>
+    <!-- Optional: Add description here -->
+    <p class="mt-2 text-base md:text-lg text-gray-200">Unlocking Your Potential with Advanced Learning Tools</p>
+  </div>
+
+</section>
+
+<!-- Features Hero Section -->
+<header class="py-4 text-center">
+  <h1 class="text-4xl md:text-7xl font-extrabold text-[#800000] drop-shadow-lg bounce-in">
+    Our Features
+  </h1>
+  <p class="text-lg md:text-3xl text-white mt-4 max-w-4xl mx-auto scroll-animate">
+    Unlocking Your Potential with Advanced Learning Tools
+  </p>
+</header>
+
+
+ <!-- Features Grid Section -->
+ <section class="px-6 py-12">
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+ <!-- Feature 1: Live Mentorship -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-chalkboard-teacher text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Live Mentorship</h3>
+ <p class="text-gray-200">Get one-on-one sessions with industry experts and clarify real-world doubts as you progress through projects.</p>
+ </div>
+
+ <!-- Feature 2: Job-Ready Tracks -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-briefcase text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Job-Ready Tracks</h3>
+ <p class="text-gray-200">All courses are designed to make you job-ready with real company-like tasks and capstone projects.</p>
+ </div>
+
+ <!-- Feature 3: Community Collaboration -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-users text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Community Collaboration</h3>
+ <p class="text-gray-200">Join an active learner community to share projects, get feedback, and collaborate on ideas.</p>
+ </div>
+
+ <!-- Feature 4: Hands-On Labs -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-code text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Hands-On Labs</h3>
+ <p class="text-gray-200">Built-in coding environments for Python, SQL, and Web Dev let you code and test directly inside your browser.</p>
+ </div>
+
+ <!-- Feature 5: Skill Tracking -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-chart-line text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Skill Tracking</h3>
+ <p class="text-gray-200">Progress dashboards, badges, and automated reviews help you stay on track and recognize achievements.</p>
+ </div>
+
+ <!-- Feature 6: Project-Based Learning -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-laptop-code text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Project-Based Learning</h3>
+ <p class="text-gray-200">Every module ends with a mini-project to apply skills, with guidance and auto-evaluation tools.</p>
+ </div>
+
+ <!-- Feature 7: Certifications -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-award text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Certifications</h3>
+ <p class="text-gray-200">Earn verifiable, industry-recognized certificates you can showcase on your resume and LinkedIn.</p>
+ </div>
+
+ <!-- Feature 8: Flexible Learning Schedule -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-calendar-check text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Flexible Learning Schedule</h3>
+ <p class="text-gray-200">Learn at your own pace with the ability to revisit material, pause progress, and resume where you left off.</p>
+ </div>
+
+ <!-- Feature 9: Interactive Simulations -->
+ <div class="glass p-6 rounded-xl text-center scroll-animate">
+ <i class="fas fa-vr-cardboard text-[#800000] text-5xl mb-4"></i>
+ <h3 class="text-2xl font-semibold mb-2">Interactive Simulations</h3>
+ <p class="text-gray-200">Explore gamified and VR-based learning tools for real-time industry challenges.</p>
+ </div>
+
+ </div>
+ </section>
+
+<!-- Footer -->
+<footer class="bg-black text-white pt-12 px-6 md:px-20">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <!-- Logo & Description -->
+    <div>
+  <img src="/Proximalms_Logo.png" alt="ProximaLMS Logo" class="h-10 mb-4" />
+  
+  <p class="text-gray-400">
+    Bridging the gap between academia and industry with project-based, mentor-driven, real-world learning experiences.
+  </p>
+</div>
+
+
+    <!-- Navigation -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+      <ul class="space-y-3 text-gray-400">
+        <li><a href="courses.html" class="hover:text-[#800000] transition-colors"><i class="fas fa-book mr-2"></i>Courses</a></li>
+        <li><a href="about.html" class="hover:text-[#800000] transition-colors"><i class="fas fa-users mr-2"></i>About Us</a></li>
+        <li><a href="features.html" class="hover:text-[#800000] transition-colors"><i class="fas fa-star mr-2"></i>Features</a></li>
+        <li><a href="contactus.html" class="hover:text-[#800000] transition-colors"><i class="fas fa-envelope mr-2"></i>Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info + Social Media (Right side) -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+    <ul class="space-y-3 text-gray-400 mb-6">
+  <li>
+    <i class="fas fa-map-marker-alt text-[#800000] mr-2"></i>
+    <a href="https://www.google.com/maps/search/123+Innovation+Street,+Hyderabad,+India" target="_blank" class="hover:text-[#800000]">
+      123 Innovation Street, Hyderabad, India
+    </a>
+  </li>
+  <li>
+    <i class="fas fa-phone text-[#800000] mr-2"></i>
+    <a href="tel:+919876543210" class="hover:text-[#800000]">
+      +91 98765 43210
+    </a>
+  </li>
+  <li>
+    <i class="fas fa-envelope text-[#800000] mr-2"></i>
+    <a href="mailto:support@proximalms.com" class="hover:text-[#800000]">
+      support@proximalms.com
+    </a>
+  </li>
+</ul>
+
+
+      
+      <div class="flex space-x-4 text-xl text-gray-400">
+        <a href="#" class="hover:text-[#800000] transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-[#800000] transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-[#800000] transition"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="hover:text-[#800000] transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-[#800000] transition"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
+    &copy; 2025 ProximaLMS. All rights reserved.
+  </div>
+</footer>
+
+ <!-- JavaScript for staggered scroll-animate (Intersection Observer) -->
+  <script src="/Scripts/features.js"></script>
+
+</body>
+</html>

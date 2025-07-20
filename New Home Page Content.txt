@@ -1,0 +1,156 @@
+<!-- HERO SECTION -->
+<section class="bg-gradient-to-br from-black to-gray-900 text-white py-20 px-6 md:px-20">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <div class="md:w-1/2">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+        Learn. Build. Succeed.<br />
+        <span class="text-yellow-400">ProximaLMS</span> is your gateway to job-ready, real-world learning.
+      </h1>
+      <p class="text-lg text-gray-300 mb-6">
+        Empowering learners with hands-on, project-based courses and real industry mentorship.
+      </p>
+      <a href="courses.html" class="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">
+        Explore Courses
+      </a>
+    </div>
+    <div class="md:w-1/2">
+      <img src="https://dummyimage.com/500x350/333/fff&text=Learning+Made+Smart" alt="Hero Image" class="rounded-lg shadow-lg w-full">
+    </div>
+  </div>
+</section>
+
+<!-- WHY PROXIMALMS SECTION -->
+<section class="bg-white text-black py-20 px-6 md:px-20">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10">Why Choose ProximaLMS?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
+      <div class="p-6 bg-gray-100 rounded-lg shadow">
+        <h3 class="font-bold text-xl mb-2">Project-Based Learning</h3>
+        <p class="text-gray-600">Work on real-world projects and build a strong portfolio to showcase your skills.</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-lg shadow">
+        <h3 class="font-bold text-xl mb-2">Industry Mentorship</h3>
+        <p class="text-gray-600">Learn directly from experts to gain relevant, real-world knowledge and guidance.</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-lg shadow">
+        <h3 class="font-bold text-xl mb-2">Smart LMS System</h3>
+        <p class="text-gray-600">Track progress, get feedback, and enjoy a smooth learning experience powered by intelligent tools.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR COURSES SECTION -->
+<section class="bg-gray-100 py-20 px-6 md:px-20">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10">Popular Courses</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="font-bold text-xl mb-2">Full Stack Web Development</h3>
+        <p class="text-gray-600 mb-4">Build complete web apps using HTML, CSS, JavaScript, and modern frameworks.</p>
+        <a href="courses.html" class="text-yellow-500 font-semibold hover:underline">Learn More</a>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="font-bold text-xl mb-2">Data Science with Python</h3>
+        <p class="text-gray-600 mb-4">Dive into machine learning, data visualization, and analytics with Python.</p>
+        <a href="courses.html" class="text-yellow-500 font-semibold hover:underline">Learn More</a>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="font-bold text-xl mb-2">Digital Marketing Pro</h3>
+        <p class="text-gray-600 mb-4">Master SEO, SEM, and social media marketing for career or freelancing.</p>
+        <a href="courses.html" class="text-yellow-500 font-semibold hover:underline">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS SECTION -->
+<section class="bg-white text-black py-20 px-6 md:px-20">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10">How It Works</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+      <div>
+        <div class="text-yellow-400 text-4xl mb-2">1️⃣</div>
+        <h3 class="font-semibold text-xl mb-2">Choose a Course</h3>
+        <p class="text-gray-600">Select a curated course designed for hands-on, job-relevant learning.</p>
+      </div>
+      <div>
+        <div class="text-yellow-400 text-4xl mb-2">2️⃣</div>
+        <h3 class="font-semibold text-xl mb-2">Learn & Build</h3>
+        <p class="text-gray-600">Watch lessons, complete projects, and apply your skills in real-world scenarios.</p>
+      </div>
+      <div>
+        <div class="text-yellow-400 text-4xl mb-2">3️⃣</div>
+        <h3 class="font-semibold text-xl mb-2">Get Certified</h3>
+        <p class="text-gray-600">Earn certificates and mentorship that boost your resume and job readiness.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="bg-gray-900 text-white py-20 px-6 md:px-20">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10">What Our Learners Say</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="bg-gray-800 p-6 rounded-lg shadow">
+        <p class="text-gray-300 mb-4">“ProximaLMS helped me transition from college to career with real skills and mentorship.”</p>
+        <h4 class="font-bold">— Aisha M., Web Developer</h4>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow">
+        <p class="text-gray-300 mb-4">“The courses are practical and engaging. I built a portfolio that actually got me hired.”</p>
+        <h4 class="font-bold">— Rohit K., Data Analyst</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA SECTION -->
+<section class="bg-yellow-400 text-black py-16 px-6 md:px-20 text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-6">Start Your Learning Journey Today</h2>
+  <p class="text-lg mb-6">Join thousands of learners and get job-ready with ProximaLMS.</p>
+  <a href="login.html" class="bg-black text-yellow-400 px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+    Get Started Now
+  </a>
+</section>
+
+
+
+
+<!-- WHY CHOOSE PROXIMALMS -->
+<section class="bg-white py-20 px-6 md:px-20 text-gray-800">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-gray-900">Why Choose <span class="text-yellow-500">ProximaLMS?</span></h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300 group">
+        <div class="text-yellow-500 text-4xl mb-4 group-hover:scale-110 transform transition duration-300">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">Project-Based Learning</h3>
+        <p class="text-gray-600 leading-relaxed">Work on real-world projects and build a strong portfolio to showcase your skills.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300 group">
+        <div class="text-yellow-500 text-4xl mb-4 group-hover:scale-110 transform transition duration-300">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">Industry Mentorship</h3>
+        <p class="text-gray-600 leading-relaxed">Learn directly from experts to gain relevant, real-world knowledge and guidance.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300 group">
+        <div class="text-yellow-500 text-4xl mb-4 group-hover:scale-110 transform transition duration-300">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">Job-Ready Curriculum</h3>
+        <p class="text-gray-600 leading-relaxed">Master skills that employers demand with a curriculum tailored for today’s tech-driven job market.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
