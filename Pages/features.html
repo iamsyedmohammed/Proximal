@@ -25,48 +25,57 @@
 <!-- Navigation Bar (Responsive) -->
 <nav class="bg-[#f8f6ff] sticky top-0 z-50 p-6 shadow-md">
   <div class="flex items-center justify-between">
+
     <!-- Brand -->
-<!-- Brand -->
-<a href="/" class="hover:opacity-80 transition-opacity">
-  <img src="/images/Proximalms_Logo.png" alt="ProximaLMS Logo" class="h-12" />
-</a>
+    <a href="/" class="hover:opacity-80 transition-opacity">
+      <img src="/images/Proximalms_Logo.png" alt="ProximaLMS Logo" class="h-12" />
+    </a>
 
-
-
-    <!-- Hamburger Button (mobile only) -->
+    <!-- Hamburger/X Button (mobile only) -->
     <button id="menu-btn" class="text-[#FF6B22] md:hidden text-4xl focus:outline-none">
-      &#9776;
+      <span id="menu-icon">&#9776;</span> <!-- ☰ -->
     </button>
 
-    <!-- Navigation Links (hidden on mobile) -->
-<div id="menu" class="hidden md:flex space-x-6 text-xl font-semibold text-gray-800 items-center">
-    <a href="/" class="hover:text-[#FF6B22] transition-colors">Home</a>
-  <a href="about.html" class="hover:text-[#FF6B22] transition-colors">About Us</a>
-  <a href="features.html" class="hover:text-[#FF6B22] transition-colors">Features</a>
-  <a href="courses.html" class="hover:text-[#FF6B22] transition-colors">Courses</a>
-  <a href="https://learn.proximalms.com/RegisterStudent.aspx" class="bg-[#FF6B22] text-white px-4 py-2 rounded hover:bg-[#FF6B22] transition-all">Register</a>
-</div>
-
+    <!-- Navigation Links (Desktop only) -->
+    <div id="menu" class="hidden md:flex space-x-6 text-xl font-semibold text-gray-800 items-center">
+      <a href="/" class="hover:text-[#FF6B22] transition-colors">Home</a>
+      <a href="about.html" class="hover:text-[#FF6B22] transition-colors">About Us</a>
+      <a href="features.html" class="hover:text-[#FF6B22] transition-colors">Features</a>
+      <a href="courses.html" class="hover:text-[#FF6B22] transition-colors">Courses</a>
+      <a href="https://learn.proximalms.com/RegisterStudent.aspx"
+         class="bg-[#FF6B22] text-white px-4 py-2 rounded hover:bg-[#FF6B22] transition-all">
+         Register
+      </a>
+    </div>
 
   </div>
 
- <!-- Mobile Menu (dropdown style) -->
-<div id="mobile-menu" class="md:hidden hidden mt-4 space-y-4 text-lg font-semibold">
-  <a href="/" class="block text-black hover:text-[#FF6B22]">Home</a>
-  <a href="about.html" class="block text-black hover:text-[#FF6B22]">About Us</a>
-  <a href="features.html" class="block text-black hover:text-[#FF6B22]">Features</a>
-  <a href="courses.html" class="block text-black hover:text-[#FF6B22]">Courses</a>
-  <a href="https://learn.proximalms.com/RegisterStudent.aspx" class="block text-black hover:text-[#FF6B22]">Register</a>
-</div>
-
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-4 text-lg font-semibold">
+    <a href="/" class="block text-black hover:text-[#FF6B22]">Home</a>
+    <a href="about.html" class="block text-black hover:text-[#FF6B22]">About Us</a>
+    <a href="features.html" class="block text-black hover:text-[#FF6B22]">Features</a>
+    <a href="courses.html" class="block text-black hover:text-[#FF6B22]">Courses</a>
+    <a href="https://learn.proximalms.com/RegisterStudent.aspx" class="block text-black hover:text-[#FF6B22]">Register</a>
+  </div>
 </nav>
-<!-- JS to toggle menu -->
+
+<!-- JavaScript for toggle functionality -->
 <script>
   const menuBtn = document.getElementById('menu-btn');
+  const menuIcon = document.getElementById('menu-icon');
   const mobileMenu = document.getElementById('mobile-menu');
 
   menuBtn.addEventListener('click', () => {
+    // Toggle visibility
     mobileMenu.classList.toggle('hidden');
+
+    // Toggle icon between ☰ and ✖
+    if (menuIcon.innerHTML === '☰' || menuIcon.innerHTML === '&#9776;') {
+      menuIcon.innerHTML = '✖';
+    } else {
+      menuIcon.innerHTML = '☰';
+    }
   });
 </script>
 
