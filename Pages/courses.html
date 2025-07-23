@@ -99,437 +99,136 @@
 
 </section>
 
+
+
  <section class="min-h-screen p-10">
- <h2 class="text-6xl font-extrabold text-center mb-10 text-[#FF6B22] drop-shadow-lg zoom-in">Explore Our Courses</h2>
- <p class="text-center text-xl max-w-3xl mx-auto mb-12 text-gray-200">
- Dive into our comprehensive curriculum, designed to equip you with in-demand skills for the future. Filter by difficulty and unlock your learning journey.
- </p>
 
- <div class="mb-12 max-w-4xl mx-auto flex flex-wrap justify-center gap-4 p-4 glass rounded-xl">
- <button class="bg-[#FF6B22] px-6 py-3 rounded-lg hover:bg-[#FF6B22]-darker text-white font-semibold text-lg filter-btn transition-all duration-300 shadow-md" data-filter="all">All Courses</button>
- <button class="bg-purple-600 px-6 py-3 rounded-lg hover:bg-purple-700 text-white font-semibold text-lg filter-btn transition-all duration-300 shadow-md" data-filter="beginner">Beginner</button>
- <button class="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700 text-white font-semibold text-lg filter-btn transition-all duration-300 shadow-md" data-filter="intermediate">Intermediate</button>
- <button class="bg-green-600 px-6 py-3 rounded-lg hover:bg-green-700 text-white font-semibold text-lg filter-btn transition-all duration-300 shadow-md" data-filter="advanced">Advanced</button>
- </div>
+   <div class="mb-12 max-w-5xl mx-auto flex flex-wrap justify-center gap-4 p-4 glass rounded-xl">
+<button class="filter-btn text-white font-semibold text-lg px-6 py-3 rounded-lg transition-all duration-300 shadow-md"
+  data-filter="all"
+  data-bg="bg-[#FF6B22] hover:bg-orange-700">
+  All Courses
+</button>
+<button class="filter-btn text-white font-semibold text-lg px-6 py-3 rounded-lg transition-all duration-300 shadow-md"
+  data-filter="sap"
+  data-bg="bg-purple-600 hover:bg-purple-700">
+  SAP
+</button>
 
- <div id="courseGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
- <!-- BEGINNER COURSES -->
- <!-- Course: Python Programming Fundamentals (Beginner) -->
- <div class="glass p-8 rounded-xl hover-scale course-card" data-level="beginner">
-<div class="flex items-center gap-3 mb-4">
- <i class="fab fa-python text-[#FF6B22] text-5xl"></i>
- <h3 class="text-2xl font-bold shimmer-effect">Python Programming Fundamentals</h3>
- </div>
- <p class="text-base mb-4 text-gray-200">Learn the foundational concepts of Python programming, essential for data science, web development, and automation.</p>
- <div class="course-details hidden text-sm text-gray-300 mt-4 border-t border-gray-700 pt-4 slide-in-detail">
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2">What You Can Do With Python?</h4>
- <p class="mb-2">Python is a versatile language with applications across various domains:</p>
- <ul class="list-disc list-inside space-y-1 ml-4 mb-4">
- <li><strong class="text-white">App Development:</strong> Ideal for rapid prototyping and cross-platform app development, including blockchain and gaming, due to robust frameworks and real-time testing capabilities.</li>
- <li><strong class="text-white">Web Development:</strong> Facilitates building complex web utilities with frameworks like Django, enabling faster back-end and client-side development. Used by tech giants like Google and YouTube.</li>
- <li><strong class="text-white">AI and ML:</strong> Dominant language in AI/ML due to simplicity and extensive libraries (TensorFlow, PyTorch). Supports NLP, computer vision, and reinforcement learning, making it a preferred choice for sophisticated AI solutions.</li>
- </ul>
+<button class="filter-btn text-white font-semibold text-lg px-6 py-3 rounded-lg transition-all duration-300 shadow-md"
+  data-filter="ai"
+  data-bg="bg-blue-600 hover:bg-blue-700">
+  AI & Cloud
+</button>
 
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Python Programming: Key Focus Areas</h4>
- <ul class="list-disc list-inside space-y-1">
- <li>Install Python (Anaconda) & Jupyter Notebook</li>
- <li>Install NumPy, Pandas, Matplotlib, Seaborn, and Scikit-Learn</li>
- <li>Spyder IDE basics</li>
- <li>Basics of Data Processing: Strings, Lists, Tuples, Sets, Dictionaries</li>
- <li>Control Flows & Functions (Formal, Positional, Keyword arguments, Predefined functions like `range`, `len`, `enumerate`)</li>
- <li>Data Frames</li>
- </ul>
+<button class="filter-btn text-white font-semibold text-lg px-6 py-3 rounded-lg transition-all duration-300 shadow-md"
+  data-filter="crt"
+  data-bg="bg-green-600 hover:bg-green-700">
+  CRT
+</button>
 
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Essential Packages for Data Science</h4>
- <ul class="list-disc list-inside space-y-1">
- <li><strong class="text-white">NumPy:</strong> One-dimensional & Two-dimensional Arrays, Pre-defined functions (`arrange`, `reshape`, `zeros`, `ones`, `empty`), Basic Matrix operations (Scalar & Matrix arithmetic, Slicing, Indexing, Looping, Shape Manipulation).</li>
- <li><strong class="text-white">Pandas:</strong> Series, Data Frame, Group By, crosstab, apply.</li>
- </ul>
+<button class="filter-btn text-white font-semibold text-lg px-6 py-3 rounded-lg transition-all duration-300 shadow-md"
+  data-filter="cyber"
+  data-bg="bg-red-600 hover:bg-red-700">
+  Cybersecurity
+</button>
 
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Data Preparation & Analysis</h4>
- <ul class="list-disc list-inside space-y-1">
- <li><strong class="text-white">Data Preparation Techniques:</strong> Structured Data Preparation, Data Type Conversion (Category to Numeric, Numeric to Category), Data Normalization (0-1, Z-Score), Skew Data handling (Box-Cox Transformation), Missing Data treatment.</li>
- <li><strong class="text-white">Exploratory Data Analysis (EDA):</strong> Statistical Data Analysis, Exploring Individual/Bi-Feature/Multi-feature Relationships.</li>
- <li><strong class="text-white">Feature/Dimension Reduction:</strong> Principal Component Analysis (PCA advantages, Interpretation of PCA output, Covariance & Correlation, Relating PCA to Covariance/Correlation).</li>
- <li><strong class="text-white">Feature Engineering (FE):</strong> Combine Features, Split Features.</li>
- </ul>
- <p class="mt-4"><strong class="text-[#FF6B22]">Student Connectivity:</strong> Collaborative coding exercises, peer-assisted debugging sessions, and sharing of Python scripts for real-world data manipulation challenges. Participate in mini-projects to apply Python skills in data processing and analysis.</p>
- </div>
- <button class="read-more-btn mt-6 w-full bg-[#FF6B22] hover:bg-[#FF6B22]-darker text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">Read More</button>
- </div>
 
- <!-- Course: Data Science (Beginner - Detailed Content Added) -->
- <div class="glass p-8 rounded-xl hover-scale course-card" data-level="beginner">
-<div class="flex items-center gap-3 mb-4">
- <i class="fas fa-chart-pie text-[#FF6B22] text-5xl"></i>
- <h3 class="text-2xl font-bold shimmer-effect">Data Science</h3>
- </div>
- <p class="text-base mb-4 text-gray-200">Master the data science workflow from data collection and cleaning to modeling, visualization, and interpretation.</p>
- <div class="course-details hidden text-sm text-gray-300 mt-4 border-t border-gray-700 pt-4 slide-in-detail">
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2">Course Overview</h4>
- <p class="mb-4">Welcome to our Data Science Course, exploring the captivating realm of data analytics, machine learning, and predictive modeling. This extensive program is crafted to furnish you with the abilities and understanding essential for success in the current data-centric environment. Whether you’re a novice embarking on your data science journey or a proficient expert seeking to refine your skills, our course caters to all.</p>
+<button class="filter-btn text-white font-semibold text-lg px-6 py-3 rounded-lg transition-all duration-300 shadow-md"
+  data-filter="fdp"
+  data-bg="bg-pink-600 hover:bg-pink-700">
+  FDP
+</button>
 
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Why Learn Data Science?</h4>
- <p class="mb-4">Data science is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from data in various forms, both structured and unstructured. It encompasses a wide range of techniques and tools, including statistics, machine learning, data visualization, and data management. This vast amount of data presents both opportunities and challenges, as it can be difficult to manage, analyze, and interpret. Data science provides the necessary tools and techniques to harness the power of data and derive valuable insights from it.</p>
+<button class="filter-btn text-white font-semibold text-lg px-6 py-3 rounded-lg transition-all duration-300 shadow-md"
+  data-filter="live"
+  data-bg="bg-yellow-600 hover:bg-yellow-700">
+  LIVE Projects
+</button>
 
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Data Science and Business Growth</h4>
- <p class="mb-4">Data science employs scientific methods to analyze and interpret data, extracting valuable insights crucial for business growth. By collecting, cleaning, and modeling data, businesses can make informed decisions, predict future trends, and optimize operations. It enhances customer understanding, enabling personalized services and improved retention. Data science provides a competitive advantage, fostering innovation and effective risk management. It is instrumental in shaping marketing strategies for higher efficiency and ROI, making it indispensable for sustained business growth.</p>
+  </div>
 
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Industries, Functionalities & Data Importance</h4>
- <p class="mb-4">Data science is integral to diverse industries, offering functionalities such as predictive analytics, personalized experiences, and operational optimization. Data is essential for informed decision-making, efficiency, innovation, risk management, and gaining a competitive edge, making data science a critical tool for navigating the complexities of the modern business landscape.</p>
+  <!-- Course Cards -->
+  <div id="courseGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Stages in Data Science Execution</h4>
- <ul class="list-disc list-inside space-y-1">
- <li><strong class="text-white">Quest for Curiosity:</strong> Deep dive into the problem.</li>
- <li><strong class="text-white">Data Discovery Dance:</strong> Explore data creatively.</li>
- <li><strong class="text-white">Feature Engineering Fiesta:</strong> Craft powerful features.</li>
- <li><strong class="text-white">Model Magic Show:</strong> Apply algorithms to predict and classify.</li>
- <li><strong class="text-white">Validation Voyage:</strong> Ensure model reliability.</li>
- <li><strong class="text-white">Hyperparameter Harmony:</strong> Tune for optimal performance.</li>
- <li><strong class="text-white">Deployment Dazzle:</strong> Roll out model into the real world.</li>
- <li><strong class="text-white">Feedback Fireworks:</strong> Refine and enhance using user feedback.</li>
- <li><strong class="text-white">Maintenance Masquerade:</strong> Keep model fresh and relevant.</li>
- <li><strong class="text-white">Insightful Finale:</strong> Conclude with impactful insights.</li>
- </ul>
+    <!-- SAP Courses -->
+    <div class="glass p-8 rounded-xl hover-scale course-card" data-level="sap">
+      <div class="flex items-center gap-3 mb-4">
+        <i class="fas fa-network-wired text-[#FF6B22] text-5xl"></i>
+        <h3 class="text-2xl font-bold shimmer-effect">SAP Courses</h3>
+      </div>
+      <p class="text-base mb-4 text-gray-200">
+        Master enterprise resource planning with hands-on SAP training in FICO, MM, ABAP, and S/4HANA.
+      </p>
+      <a href="https://kalpracademy.com/courses/sap-courses/" target="_blank" class="mt-6 w-full inline-block text-center bg-[#FF6B22] hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">Join Now</a>
+    </div>
 
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Basics of Statistics</h4>
- <ul class="list-disc list-inside space-y-1">
- <li>Data Types, Descriptive Statistics (Mean, Median, Mode, Quartile, Percentile)</li>
- <li>Range, Variance and Standard Deviation</li>
- <li>Co-variance, Co-relation</li>
- <li>Chi-squared Analysis, Hypothesis Testing.</li>
- </ul>
+    <!-- AI & Cloud -->
+    <div class="glass p-8 rounded-xl hover-scale course-card" data-level="ai">
+      <div class="flex items-center gap-3 mb-4">
+        <i class="fas fa-cloud text-[#FF6B22] text-5xl"></i>
+        <h3 class="text-2xl font-bold shimmer-effect">AI, Data Science & Cloud Tech</h3>
+      </div>
+      <p class="text-base mb-4 text-gray-200">
+        Become future-ready with integrated training in AI, Data Science, and leading cloud platforms like AWS and Azure.
+      </p>
+      <a href="https://kalpracademy.com/courses/ai-data-science-cloud-technology-courses/" target="_blank" class="mt-6 w-full inline-block text-center bg-[#FF6B22] hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">Join Now</a>
+    </div>
 
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Basics of Mathematics</h4>
- <ul class="list-disc list-inside space-y-1">
- <li>Limits, Derivatives and Partial Derivatives</li>
- <li>Gradients and its Significance.</li>
- </ul>
+    <!-- CRT -->
+    <div class="glass p-8 rounded-xl hover-scale course-card" data-level="crt">
+      <div class="flex items-center gap-3 mb-4">
+        <i class="fas fa-university text-[#FF6B22] text-5xl"></i>
+        <h3 class="text-2xl font-bold shimmer-effect">Campus Recruitment Training (CRT)</h3>
+      </div>
+      <p class="text-base mb-4 text-gray-200">
+        Prepare for your dream job with aptitude, communication, coding, and personality development sessions.
+      </p>
+      <a href="https://kalpracademy.com/courses/campus-recruitment-training-crt/" target="_blank" class="mt-6 w-full inline-block text-center bg-[#FF6B22] hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">Join Now</a>
+    </div>
 
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Probability for Data Scientist</h4>
- <ul class="list-disc list-inside space-y-1">
- <li>Basic Probability and Conditional Probability, Properties of Random Variables</li>
- <li>Expectations (Mean) and Variance, Entropy and Cross-entropy</li>
- <li>Covariance and correlation, Estimating probability of Random variable</li>
- <li>Understanding standard random processes, Normal/Binomial/Multinomial/Bernoulli Distribution</li>
- <li>Probability, Prior probability, Posterior probability, Bayes Theorem, Naive Bayes Algorithm.</li>
- </ul>
- <p class="mt-4"><strong class="text-[#FF6B22]">Student Connectivity:</strong> Collaborative problem-solving sessions on statistical concepts, group projects involving data exploration and hypothesis testing, and interactive workshops on probability distributions relevant to data science.</p>
- </div>
- <button class="read-more-btn mt-6 w-full bg-[#FF6B22] hover:bg-[#FF6B22]-darker text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">Read More</button>
- </div>
+    <!-- Cybersecurity -->
+<div class="glass p-8 rounded-xl hover-scale course-card" data-level="cyber">
+  <div class="flex items-center gap-3 mb-4">
+    <i class="fas fa-shield-alt text-[#FF6B22] text-5xl"></i>
+    <h3 class="text-2xl font-bold shimmer-effect">Cybersecurity Courses</h3>
+  </div>
+  <p class="text-base mb-4 text-gray-200">
+    Learn how to protect systems, networks, and programs from cyber threats with our hands-on cybersecurity training.
+  </p>
+  <a href="https://example.com/cybersecurity" target="_blank"
+     class="mt-6 w-full inline-block text-center bg-[#FF6B22] hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">
+    Join Now
+  </a>
+</div>
 
- <!-- INTERMEDIATE COURSES -->
- <!-- Course: Power BI (Intermediate) -->
- <div class="glass p-8 rounded-xl hover-scale course-card" data-level="intermediate">
-<div class="flex items-center gap-3 mb-4">
- <i class="fas fa-chart-bar text-[#FF6B22] text-5xl"></i>
- <h3 class="text-2xl font-bold shimmer-effect">Power BI</h3>
- </div>
- <p class="text-base mb-4 text-gray-200">Transform raw data into meaningful insights using Power BI's powerful visualization and reporting capabilities.</p>
- <div class="course-details hidden text-sm text-gray-300 mt-4 border-t border-gray-700 pt-4 slide-in-detail">
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2">Power BI Overview</h4>
- <p class="mb-4">Power BI transforms dull spreadsheets into captivating visual stories. It's a powerful business analytics tool by Microsoft for transforming raw data into interactive visualizations and business intelligence insights. It enables users to connect to various data sources, create compelling reports and dashboards, and share them across organizations. With features like data modeling, real-time analytics, and cloud integration, Power BI aids in informed decision-making. It is employed across industries for data-driven decision support, performance tracking, and gaining actionable insights.</p>
 
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Key Learning Areas</h4>
- <ul class="list-disc list-inside space-y-1">
- <li><strong class="text-white">Data Visualization:</strong> Bar Chart, Histogram, Box whisker plot, Line plot, Scatter Plot, Heat Map. Tools: Matplotlib, Seaborn.</li>
- <li><strong class="text-white">Regression (Supervised Learning):</strong> What is regression? Use Cases, Linear Regression (Theory, Model Evaluation, RMSE, R-Square, Adj R-Square, Feature selection methods, Practice Problem).</li>
- <li><strong class="text-white">Overfitting/Underfitting:</strong> Understand, Visualize, and Handle overfitting.</li>
- <li><strong class="text-white">Decision Trees:</strong> What are Decision Trees? Gini, Entropy criterions, Decision trees in Classification & Regression.</li>
- <li><strong class="text-white">Ensembles:</strong> Random Forest, Boosting (Ada, Gradient, Extreme Gradient).</li>
- <li><strong class="text-white">SVM (Support Vector Machines)</strong></li>
- <li><strong class="text-white">Re-sampling Techniques:</strong> K-fold, Repeated Hold-out Data, Bootstrap aggregation sampling.</li>
- <li><strong class="text-white">Tree Based Algorithms:</strong> Gini Index, Entropy, Information Gain.</li>
- </ul>
- <p class="mt-4"><strong class="text-[#FF6B22]">Student Connectivity:</strong> Engage in collaborative dashboard design projects, present data analysis findings to peers, and participate in challenges to optimize Power BI reports for various business scenarios. Connect with BI professionals for insights.</p>
- </div>
- <button class="read-more-btn mt-6 w-full bg-[#FF6B22] hover:bg-[#FF6B22]-darker text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">Read More</button>
- </div>
+    <!-- FDP -->
+    <div class="glass p-8 rounded-xl hover-scale course-card" data-level="fdp">
+      <div class="flex items-center gap-3 mb-4">
+        <i class="fas fa-chalkboard-teacher text-[#FF6B22] text-5xl"></i>
+        <h3 class="text-2xl font-bold shimmer-effect">FDP on AI & Generative AI</h3>
+      </div>
+      <p class="text-base mb-4 text-gray-200">
+        Upskill your faculty team in Artificial Intelligence, Generative AI, and Agentic AI through expert-led sessions.
+      </p>
+      <a href="https://kalpracademy.com/courses/faculty-development-program-fdp-on-ai-generative-ai-agentic-ai/" target="_blank" class="mt-6 w-full inline-block text-center bg-[#FF6B22] hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">Join Now</a>
+    </div>
 
- <!-- Course: Azure Data Engineering (Intermediate) -->
- <div class="glass p-8 rounded-xl hover-scale course-card" data-level="intermediate">
-<div class="flex items-center gap-3 mb-4">
- <i class="fas fa-server text-[#FF6B22] text-5xl"></i>
- <h3 class="text-2xl font-bold shimmer-effect">Azure Data Engineering</h3>
- </div>
- <p class="text-base mb-4 text-gray-200">Design and implement data solutions on Microsoft Azure, covering services like Azure Data Lake, Data Factory, and Databricks.</p>
- <div class="course-details hidden text-sm text-gray-300 mt-4 border-t border-gray-700 pt-4 slide-in-detail">
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2">Course Overview: Azure Data Engineering</h4>
- <p class="mb-4">This comprehensive course covers Azure Data Factory (ADF), Azure Databricks with PySpark, and Synapse Analytics to equip you with robust data engineering skills on Azure.</p>
+    <!-- LIVE Projects -->
+    <div class="glass p-8 rounded-xl hover-scale course-card" data-level="live">
+      <div class="flex items-center gap-3 mb-4">
+        <i class="fas fa-laptop-code text-[#FF6B22] text-5xl"></i>
+        <h3 class="text-2xl font-bold shimmer-effect">LIVE Projects in AI & Gen AI</h3>
+      </div>
+      <p class="text-base mb-4 text-gray-200">
+        Work on real-time AI, Generative AI, and Agentic AI projects designed for BTech/BSc/BCom students.
+      </p>
+      <a href="https://kalpracademy.com/courses/live-projects-in-ai-gen-ai-agentic-ai-for-btech-bsc-bcom/" target="_blank" class="mt-6 w-full inline-block text-center bg-[#FF6B22] hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">Join Now</a>
+    </div>
 
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">WEEK - 01: Introduction and Azure Data Factory (ADF)</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>On-prem vs. Cloud (Azure Cloud) concepts, Setting up Azure subscription.</li>
- <li>Overview of Azure services for data engineering: IAAS, PAAS, SAAS.</li>
- <li>Resource groups, Virtual networks, VMs, Storage accounts, Blob storage, Azure Data Lake Gen2, Key Vault, Logic Apps, Azure Monitor.</li>
- <li>Introduction to ADF: Architecture, components, Integration runtimes, Linked services, Datasets, Pipelines, Activities (Lookup, ForEach, Get Metadata, Copy, Stored Procedure, Web Switch), Triggers (Schedule, Tumbling Window, Event based).</li>
- </ul>
+  </div>
 
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">WEEK - 02: Azure SQL</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>RDBMS & Types of DBMS, Azure SQL Introduction & Creation.</li>
- <li>SSMS setup, Overview of servers, databases, Tables, Constraints, Normalization.</li>
- <li>Operators, Data types, Queries, Joins, Stored Procedures, Window Functions, Temp Tables, CTE, Performance Tuning, Advanced SQL Concepts.</li>
- <li>Azure SQL Database and migration strategies.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">WEEK - 03: Azure Data Factory (ADF) - Advanced Scenarios</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Copy Activity Behavior, Validate copied data.</li>
- <li>Load data from on-prem SQL Server to Azure SQL DB (Full & Incremental loads).</li>
- <li>Load REST API data into Azure Cloud using ADF.</li>
- <li>Copy Data from on-prem to Azure SQL DW with Polybase (Bulk Insert).</li>
- <li>Data Flows Overview & Types of Transformations.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">WEEK - 04: Azure Databricks Basics</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>What are Azure Databricks & purpose & advantages, What is PySpark.</li>
- <li>Different types of data formats & data types.</li>
- <li>Real-time streaming vs. Batch processing, Hadoop MapReduce vs. Spark.</li>
- <li>Clusters & types, DBFS, Unity Catalog, DataFrames vs. RDD, PySpark syntax.</li>
- <li>DB utilities & widgets.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">WEEK - 05: Azure Databricks - Advanced Operations</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Read data from Azure Blob & ADLS Gen2, Mount point purpose, Create Secret Scope.</li>
- <li>Call notebooks, Integrate notebooks into ADF pipelines.</li>
- <li>Repo setups in Azure Databricks, Run jobs.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">WEEK - 06: Python for Data Engineers</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Python Introduction, Installation & setup.</li>
- <li>Python Data Types (String, List, Tuple, Dict), Functions & Arguments (Lambda).</li>
- <li>Modules & Packages, Flow Control & Logging Module.</li>
- <li>File Handling & Exception Handling.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">WEEK - 07: Snowflake Integration</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Why Snowflake? Trial account creation, Architecture, Virtual Warehouses.</li>
- <li>Micro-partitioning & Data clustering, Data loading & transformation.</li>
- <li>External/Internal Stages, SnowSQL, Copy command options, Loading semi-structured data.</li>
- <li>Loading data from Azure, Caching, Zero Copy Cloning, Table Types, External Tables.</li>
- <li>RBAC (Roles, Users), Dynamic Data Masking, Data Sharing.</li>
- <li>User Defined Functions & Stored Procedures.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">WEEK - 08 & 09: Advanced Concepts & DevOps</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Spark SQL: Introduction, DF creation, Basics, Joins, Functions.</li>
- <li>Implement SCD Type1 & Apache Spark Databricks Delta, Delta Lake in Azure Databricks.</li>
- <li>ADF Integration with Azure Databricks.</li>
- <li>Best practices & optimization, Monitoring & troubleshooting.</li>
- <li>Azure DevOps Introduction: Boards (Agile, Scrum, Kanban), Repos, Branching strategies, Pull requests, Approvals.</li>
- <li>CI/CD process in Azure DevOps (ADF & ADE code setup into classic pipelines).</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">WEEK - 10 & 11: Real-World Projects & Capstone</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Mid-term project: ADF, ADB, SQL, Python.</li>
- <li>Advanced project: Snowflake, Synapse Analytics, Optimization.</li>
- <li>Capstone Project: Comprehensive end-to-end data engineering project, presentation, feedback.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">WEEK - 12: Certification & Continuous Learning</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Certification preparation workshops.</li>
- <li>Implementation of industry best practices.</li>
- <li>Real-World case studies.</li>
- <li>Guest Lectures & Workshops with industry experts.</li>
- <li>Encourage continuous learning and staying updated on new Azure features.</li>
- </ul>
- <p class="mt-4"><strong class="text-[#FF6B22]">Student Connectivity:</strong> Engage in collaborative weekly lab sessions, participate in simulated project teams, and attend exclusive Q&A sessions with Azure MVPs. Contribute to a shared knowledge base and support forum.</p>
- </div>
- <button class="read-more-btn mt-6 w-full bg-[#FF6B22] hover:bg-[#FF6B22]-darker text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">Read More</button>
- </div>
-
- <!-- Course: Data Engineering with AWS (Intermediate) -->
- <div class="glass p-8 rounded-xl hover-scale course-card" data-level="intermediate">
-<div class="flex items-center gap-3 mb-4">
- <i class="fas fa-hard-drive text-[#FF6B22] text-5xl"></i>
- <h3 class="text-2xl font-bold shimmer-effect">Data Engineering with AWS</h3>
- </div>
- <p class="text-base mb-4 text-gray-200">Learn to build, manage, and optimize data pipelines using AWS services like S3, Glue, Athena, and Redshift.</p>
- <div class="course-details hidden text-sm text-gray-300 mt-4 border-t border-gray-700 pt-4 slide-in-detail">
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2">Mastering Data Engineering with AWS: Your Complete Training Guide</h4>
- <p class="mb-4">Are you ready to elevate your data engineering skills to new heights with Amazon Web Services (AWS)? In today’s data-driven world, mastering data engineering on AWS is essential for organizations looking to extract valuable insights and drive impactful decision-making. Whether you’re a seasoned data professional or a newcomer to the field, our comprehensive training program will equip you with the knowledge and skills needed to succeed in AWS data engineering.</p>
-
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Why Choose AWS for Data Engineering?</h4>
- <p class="mb-4">AWS offers a robust suite of services specifically designed for data engineering tasks, providing scalable and cost-effective solutions for ingesting, storing, processing, and analyzing large volumes of data. From Amazon S3 for durable and scalable storage to Amazon Redshift for data warehousing and Amazon EMR for big data processing, AWS has everything you need to build robust data pipelines and derive actionable insights from your data.</p>
-
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">What You’ll Learn:</h4>
- <ul class="list-disc list-inside space-y-1">
- <li><strong class="text-white">Understanding AWS Data Services:</strong> Gain a deep understanding of key AWS data services, including Amazon S3, Amazon Redshift, Amazon EMR, AWS Glue, Amazon Athena, and more.</li>
- <li><strong class="text-white">Designing Data Pipelines:</strong> Learn best practices for designing scalable and fault-tolerant data pipelines on AWS, optimizing performance, and ensuring data security and compliance.</li>
- <li><strong class="text-white">Data Transformation and Analytics:</strong> Explore techniques for data transformation and analytics using AWS services such as AWS Glue, Amazon EMR, Amazon Athena, and Amazon Redshift.</li>
- <li><strong class="text-white">Real-Time Data Processing:</strong> Discover how to perform real-time data processing and analytics using services like Amazon Kinesis and AWS Lambda, enabling you to derive insights from streaming data in real-time.</li>
- </ul>
-
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Hands-On Labs and Projects:</h4>
- <p class="mb-4">Our training program includes hands-on labs and real-world projects designed to reinforce your learning and provide practical experience in building end-to-end data pipelines on AWS. From data ingestion and transformation to analytics and visualization, you’ll work on real datasets and gain valuable experience that you can apply in your own projects.</p>
-
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Expert Instructors and Mentorship:</h4>
- <p class="mb-4">Learn from industry experts with extensive experience in data engineering and AWS. Our instructors provide personalized guidance and mentorship throughout your learning journey, ensuring you have the support you need to succeed.</p>
-
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2 mt-4">Career Opportunities:</h4>
- <p class="mb-4">Upon completion of our training program, you’ll be well-equipped to pursue various career opportunities in data engineering, data architecture, cloud architecture, and more. With AWS data engineering skills in high demand, you’ll have the competitive edge needed to advance your career in today’s data-driven job market.</p>
- <p class="mt-4"><strong class="text-[#FF6B22]">Student Connectivity:</strong> Engage in collaborative cloud lab exercises, participate in team-based data pipeline challenges, and benefit from live Q&A sessions with AWS solution architects and data engineers.</p>
- </div>
- <button class="read-more-btn mt-6 w-full bg-[#FF6B22] hover:bg-[#FF6B22]-darker text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">Read More</button>
- </div>
-
- <!-- ADVANCED COURSES -->
- <!-- Course: Advanced AI & Machine Learning (Advanced) -->
- <div class="glass p-8 rounded-xl hover-scale course-card" data-level="advanced">
- <div class="flex items-center gap-3 mb-4">
- <i class="fas fa-cogs text-[#FF6B22] text-5xl"></i>
- <h3 class="text-2xl font-bold shimmer-effect">Advanced AI & Machine Learning</h3>
- </div>
- <p class="text-base mb-4 text-gray-200">Dive deep into advanced AI concepts, including reinforcement learning, natural language processing, and computer vision with practical applications.</p>
- <div class="course-details hidden text-sm text-gray-300 mt-4 border-t border-gray-700 pt-4 slide-in-detail">
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2">What is Artificial Intelligence?</h4>
- <p class="mb-4">Artificial intelligence is a constellation of many different technologies working together to enable machines to sense, comprehend, act, and learn with human-like levels of intelligence. Maybe that’s why it seems as though everyone’s definition of artificial intelligence is different: AI isn’t just one thing.</p>
- <p class="mb-4"><strong class="text-[#FF6B22]">Importance of AI:</strong> General AI is more like what you see in sci-fi films, where sentient machines emulate human intelligence, thinking strategically, abstractly and creatively, with the ability to handle a range of complex tasks. While machines can perform some tasks better than humans (e.g. data processing), this fully realized vision of general AI does not yet exist outside the silver screen. That’s why human-machine collaboration is crucial—in today’s world, artificial intelligence remains an extension of human capabilities, not a replacement.</p>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Artificial Intelligence and Machine Learning:</h5>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Classification (Supervised Learning)</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>What is Classification?</li>
- <li>Finding Patterns/Fixed Patterns & Problems with Fixed Patterns</li>
- <li>Machine learning approach over fixed pattern approach</li>
- <li>Decision Tree based classification, Ensemble Based Classification</li>
- <li>Logistic Regression (SGD Classifier)</li>
- <li>Accuracy measurements: Confusion Matrix, ROC Curve, AUC Score</li>
- <li>Multi-class Classification, Softmax Regression Classifier, Multi-label Classification, Multi-output Classification.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Ensemble Models</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Random Forest, Bagging, Boosting (Adaptive Boosting, Gradient Boosting, Extreme Gradient Boosting)</li>
- <li>Heterogeneous Ensemble Models: Stacking</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Regression and Optimization</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Multiple/Polynomial Regression (scikit-learn): Multiple Linear Regressions (SGD Regressor), Polynomial Regression</li>
- <li>Matrix operations: addition, subtraction, multiplication and transpose</li>
- <li>Optimization theory for data scientist (Gradient Descent Algorithm)</li>
- <li>Modelling ML problems with optimization requirements, Solving unconstrained/linearly constrained optimization problems</li>
- <li>Gradient descent ideas: Batch gradient descent, Stochastic gradient descent.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Model Evaluation and Error Analysis</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Train/Validation/Test split, K-Fold Cross Validation</li>
- <li>The Problem of Over-fitting (Bias-Variance trade-off), Learning Curve</li>
- <li>Regularization (Ridge, Lasso and Elastic-Net)</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Recommendation System</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>What is Recommendation System? Top-N Recommender, Rating Prediction</li>
- <li>Content based Recommenders & Limitations</li>
- <li>Machine Learning Approaches for Recommenders: User-User KNN model, Item-Item KNN model, Factorization or latent factor model, Hybrid Recommenders</li>
- <li>Evaluation Metrics: Top-N Recommender (Accuracy, Error Rate), Rating Prediction (RMSE).</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Clustering (Unsupervised Learning)</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Finding pattern and Fixed Pattern Approach & Limitations</li>
- <li>Machine Learning Approaches for Clustering: Iterative based K-Means, Density based DB-SCAN.</li>
- <li>Evaluation Metrics for Clustering: Cohesion, Coupling, Correlation.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Support Vector Machine (SVM)</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>SVM Classifier (Soft/Hard – Margin)</li>
- <li>Linear SVM, Non-Linear SVM, Kernel SVM</li>
- <li>SVM Regression.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">PCA (Unsupervised Learning)</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Dimensionality Reduction, Choosing Number of Dimensions or Principal Components</li>
- <li>Incremental PCA, Kernel PCA, When to apply PCA?</li>
- <li>Eigen vectors, Eigen values.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Model Deployment</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Pickle (Pkl file), Model load from Pkl file and prediction.</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Association Rules</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>A priori Algorithm, Collaborative Filtering (User-Item based)</li>
- </ul>
- <p class="mt-4"><strong class="text-[#FF6B22]">Student Connectivity:</strong> Participate in advanced group projects focusing on complex AI/ML model development and deployment. Engage in deep-dive discussions on algorithm intricacies and contribute to a knowledge base of best practices for real-world AI applications.</p>
- </div>
- <button class="read-more-btn mt-6 w-full bg-[#FF6B22] hover:bg-[#FF6B22]-darker text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">Read More</button>
- </div>
-
- <!-- Course: Generative AI (Advanced) -->
- <div class="glass p-8 rounded-xl hover-scale course-card" data-level="advanced">
-<div class="flex items-center gap-3 mb-4">
- <i class="fas fa-robot text-[#FF6B22] text-5xl"></i>
- <h3 class="text-2xl font-bold shimmer-effect">Generative AI</h3>
- </div>
- <p class="text-base mb-4 text-gray-200">Understand the basics of generative models, large language models, and creative AI tools. Explore how AI can create new content.</p>
- <div class="course-details hidden text-sm text-gray-300 mt-4 border-t border-gray-700 pt-4 slide-in-detail">
- <h4 class="text-xl font-bold text-[#FF6B22] mb-2">COURSE CURRICULUM: GENERATIVE AI</h4>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Introduction and Foundational Concepts</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Statistics, Probability and Matrices</li>
- <li>Data Mining and Embedding DS with SDLC</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Machine Learning</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Unsupervised and Supervised Learning</li>
- <li>Regression and Evaluation, Classification and Evaluation</li>
- <li>Ensemble Learning</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Deep Learning</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Fundamental concepts of Deep Learning (Neural Networks, Forward/Backward propagation, Epoch, Learning Rate, Activation Function, Loss Function)</li>
- <li>ANN (Artificial Neural Networks), CNN (Convolutional Neural Networks), RNN (Recurrent Neural Networks)</li>
- <li>LSTM (Long Short-Term Memory)</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Natural Language Processing (NLP)</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>Tokenization (BOW) and regex</li>
- <li>Vectorization (TF-IDF, Word2Vec, GloVe)</li>
- <li>NLP Libraries, NLP use cases</li>
- <li>Advanced DL (CV - Computer Vision, Encoders, GANs - Generative Adversarial Networks)</li>
- <li>Advanced NLP (Transformers, Attention, BERT, T5)</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">LLMs & Generative AI Deep Dive</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>LLM and foundational concepts, Different types and Key players</li>
- <li>Prompt Engineering</li>
- </ul>
-
- <h5 class="text-lg font-bold text-[#FF6B22] mt-4 mb-2">Practical Applications, Capstone Project, and Bonus</h5>
- <ul class="list-disc list-inside space-y-1">
- <li>AWS S3, AWS Q, Claude 3</li>
- <li>Prompt Engineering (additional practicals)</li>
- <li>AWS Bedrock, AI Agents</li>
- </ul>
- <p class="mt-4"><strong class="text-[#FF6B22]">Student Connectivity:</strong> Engage in collaborative projects to develop and fine-tune generative models, participate in workshops with leading AI innovators, and contribute to cutting-edge research discussions on the future of AI.</p>
- </div>
- <button class="read-more-btn mt-6 w-full bg-[#FF6B22] hover:bg-[#FF6B22]-darker text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-lg">Read More</button>
- </div>
-
- </div>
  </section>
 
 <!-- Footer -->
@@ -603,5 +302,47 @@
 </footer>
 
 <script src="/Scripts/courses.js"></script>
+<script>
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const courseCards = document.querySelectorAll(".course-card");
+
+  filterButtons.forEach(button => {
+    // Set initial background classes
+    const bg = button.dataset.bg.split(" ");
+    button.classList.add(...bg);
+
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+
+      // Show/hide courses
+      courseCards.forEach(card => {
+        card.style.display = (filter === "all" || card.dataset.level === filter) ? "block" : "none";
+      });
+
+      // Reset all buttons to original background
+      filterButtons.forEach(btn => {
+        btn.classList.remove("ring-4", "ring-white", "scale-105");
+
+        // Remove any bg-* or hover:bg-* classes
+        btn.classList.forEach(cls => {
+          if (cls.startsWith("bg-") || cls.startsWith("hover:bg-")) {
+            btn.classList.remove(cls);
+          }
+        });
+
+        // Re-apply original background
+        const originalBg = btn.dataset.bg.split(" ");
+        btn.classList.add(...originalBg);
+      });
+
+      // Highlight the active button
+      button.classList.add("ring-4", "ring-white", "scale-105");
+    });
+  });
+</script>
+
+
+
+
 </body>
 </html>

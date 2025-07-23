@@ -88,3 +88,9 @@
  opacity: 0;
  animation: slideInDetail 0.6s ease-out forwards;
  }
+
+
+ .filter-btn.active {
+  outline: 3px solid white;
+  transform: scale(1.05);
+}
