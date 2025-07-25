@@ -23,6 +23,7 @@
 
 <link rel="stylesheet" href="/Style/index.css">
 <link rel="stylesheet" href="/Style/scrollbar.css">
+<link rel="stylesheet" href="/Style/hero.css">
  </head>
  <body class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">
  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -50,12 +51,12 @@
       <a href="/Pages/about.html" class="hover:text-[#FF6B22] transition-colors">About Us</a>
       <a href="/Pages/features.html" class="hover:text-[#FF6B22] transition-colors">Features</a>
       <a href="/Pages/courses.html" class="hover:text-[#FF6B22] transition-colors">Courses</a>
-      <a href="https://learn.proximalms.com/RegisterStudent.aspx" 
+      <a href="https://learn.proximalms.com/login.aspx" 
          class="text-white px-4 py-2 rounded transition-all" 
          style="background-color: #FF6B22;"
          onmouseover="this.style.boxShadow='0 0 15px #FF6B22'" 
          onmouseout="this.style.boxShadow='none'">
-         Register
+         Login LMS
       </a>
     </div>
   </div>
@@ -66,7 +67,7 @@
     <a href="/Pages/about.html" class="block text-black hover:text-[#FF6B22]">About Us</a>
     <a href="/Pages/features.html" class="block text-black hover:text-[#FF6B22]">Features</a>
     <a href="/Pages/courses.html" class="block text-black hover:text-[#FF6B22]">Courses</a>
-    <a href="https://learn.proximalms.com/RegisterStudent.aspx" class="block text-black hover:text-[#A6193C]">Register</a>
+    <a href="https://learn.proximalms.com/login.aspx" class="block text-black hover:text-[#A6193C]">Login LMS</a>
   </div>
 </nav>
 
@@ -106,37 +107,52 @@
 
 
 
-<!-- HERO SECTION -->
-<section class="bg-gradient-to-br from-black to-gray-900 text-white py-16 px-4 md:px-8">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
-    
-    <!-- Left Content -->
-    <div class="md:w-1/2 w-full md:pr-4 text-left">
-      <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-5">
-        Learn. Build. Succeed.<br />
-        <span style="color: #FF6B22;">ProximaLMS</span> is your gateway to job-ready, real-world learning.
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>
+        Does your college need <br>
+        <span class="typewriter-container">
+          <span id="typewriter"></span><span class="cursor"></span>
+        </span>
       </h1>
-      <p class="text-lg text-gray-300 mb-6">
-        Empowering learners with hands-on, project-based courses and real industry mentorship.
-      </p>
-      <a href="/Pages/courses.html" 
-   class="inline-block text-white px-6 py-3 rounded-lg font-semibold transition duration-300 hover:shadow-[0_0_15px_#FF6B22]" 
-   style="background-color: #FF6B22;">
-   Explore Courses
-</a>
 
+      <!-- ISO Certification Image -->
+      <div class="iso-logo">
+        <img src="/images/iso-2-1-logo-svgrepo-com.svg" alt="ISO Certified">
+      </div>
+
+     
+      <a href="/Pages/courses.html" class="cta-button">Explore Courses</a>
+
+      <!-- OUR IMPACT SECTION now placed inside hero-text -->
+      <section class="impact-section">
+        <h2 class="impact-heading">Our Impact</h2>
+        <div class="impact-grid">
+          <div class="impact-item">
+            <h3>2000+</h3>
+            <p>Hiring Partners</p>
+          </div>
+          <div class="impact-item">
+            <h3>98%</h3>
+            <p>Placement Rate</p>
+          </div>
+          <div class="impact-item">
+            <h3>1000+</h3>
+            <p>Industry Experts</p>
+          </div>
+          <div class="impact-item">
+            <h3>3000+</h3>
+            <p>Students Placed</p>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <!-- Right Image -->
-  <div class="md:w-1/2 w-full float-animate">
-  <img src="/images/Herosectionimg.webp"
-       alt="Hero Image"
-       class="rounded-lg shadow-lg w-full">
-</div>
-
-    
-  </div>
-</section>
+    <div class="hero-image">
+      <img src="/images/image.png" alt="Students with laptop">
+    </div>
+  </section>
 
 <!-- About Us Preview Section -->
 <section class="bg-gradient-to-br from-purple-900 to-indigo-800 py-16 px-6 text-white">
@@ -454,7 +470,7 @@
     <h2 class="text-4xl font-extrabold mb-6 text-[#FF6B22] text-center">Ready to Go Pro?</h2>
     <p class="text-lg md:text-xl text-gray-300 mb-8 text-center">Unlock expert-led learning, hands-on projects, and career guidance that gets results. Don’t just learn—lead.</p>
     <div class="flex justify-center">
-      <a href="https://learn.proximalms.com/login.aspx" class="inline-block bg-[#FF6B22] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#FF6B22] transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(128,0,0,0.6)]">
+      <a href="https://learn.proximalms.com/RegisterStudent.aspx" class="inline-block bg-[#FF6B22] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#FF6B22] transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(128,0,0,0.6)]">
         🚀 Join ProximaLMS Now
       </a>
     </div>
@@ -583,5 +599,6 @@
 
 
 <script src="/Scripts/home.js"></script>
+<script src="/Scripts/herosection.js"></script>
  </body>
 </html>
