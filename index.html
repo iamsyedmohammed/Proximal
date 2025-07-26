@@ -27,11 +27,9 @@
 <link rel="stylesheet" href="/Style/scrollbar.css">
 <link rel="stylesheet" href="/Style/hero.css">
  </head>
+
+
  <body class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">
-
-
-
-
 
 <!-- Navigation Bar (Responsive) -->
 <nav class="bg-[#f8f6ff] sticky top-0 z-50 p-6 shadow-md">
@@ -42,10 +40,14 @@
       <img src="/images/Proximalms_Logo.png" alt="ProximaLMS Logo" class="h-12" />
     </a>
 
-    <!-- Hamburger/X Button (mobile only) -->
-    <button id="menu-btn" class="text-[#FF6B22] md:hidden text-4xl focus:outline-none">
-      <span id="menu-icon">&#9776;</span>
-    </button>
+<!-- Hamburger/X Button (mobile only) -->
+<button id="menu-btn"
+  class="text-[#FF6B22] md:hidden text-4xl focus:outline-none border-2 border-black rounded-md shadow-lg px-3 py-2 bg-white
+         hover:bg-[#FFF8F3] hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out">
+  <span id="menu-icon">&#9776;</span>
+</button>
+
+
 
     <!-- Desktop Navigation Links -->
     <div id="menu" class="hidden md:flex space-x-6 text-xl font-semibold text-gray-800 items-center">
@@ -63,15 +65,56 @@
     </div>
   </div>
 
-  <!-- Mobile Menu Dropdown -->
-  <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-4 text-lg font-semibold px-4">
-    <a href="/" class="block text-black hover:text-[#FF6B22]">Home</a>
-    <a href="/Pages/about.html" class="block text-black hover:text-[#FF6B22]">About Us</a>
-    <a href="/Pages/features.html" class="block text-black hover:text-[#FF6B22]">Features</a>
-    <a href="/Pages/courses.html" class="block text-black hover:text-[#FF6B22]">Courses</a>
-    <a href="https://learn.proximalms.com/login.aspx" class="block text-black hover:text-[#A6193C]">Login LMS</a>
-  </div>
+
+
 </nav>
+
+
+<!-- Overlay (blurred background) -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40 hidden md:hidden"></div>
+
+<!-- Off-Canvas Mobile Menu -->
+<div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+  <div class="flex flex-col p-6 space-y-6 text-lg font-semibold text-gray-800">
+    <button id="close-menu" class="self-end text-5xl text-[#FF6B22] focus:outline-none">&times;</button>
+    <a href="/" class="hover:text-[#FF6B22] transition-colors">Home</a>
+    <a href="/Pages/about.html" class="hover:text-[#FF6B22] transition-colors">About Us</a>
+    <a href="/Pages/features.html" class="hover:text-[#FF6B22] transition-colors">Features</a>
+    <a href="/Pages/courses.html" class="hover:text-[#FF6B22] transition-colors">Courses</a>
+    <a href="https://learn.proximalms.com/login.aspx" 
+       class="text-white text-left px-4 py-2 rounded-md bg-[#FF6B22] hover:bg-[#e65a1b] transition-all">
+       Login LMS
+    </a>
+  </div>
+</div>
+
+
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const closeBtn = document.getElementById("close-menu");
+  const overlay = document.getElementById("overlay");
+
+  function openMenu() {
+    mobileMenu.classList.remove("translate-x-full");
+    mobileMenu.classList.add("translate-x-0");
+    overlay.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.add("translate-x-full");
+    mobileMenu.classList.remove("translate-x-0");
+    overlay.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+  }
+
+  menuBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+</script>
+
 
 
   <!-- HERO SECTION -->
@@ -313,120 +356,6 @@
   </div>
 </section>
 
- <!-- <div id="successPopup" class="popup">Message Sent Successfully!</div>
-
- <header class="py-8 text-left pl-10">
- <h1 class="text-6xl font-extrabold text-[#FFD700] drop-shadow-lg animate__animated animate__fadeInDown">Proxima LMS</h1>
- <p class="text-2xl font-semibold text-white mt-2">Next-Gen Learning for a Next-Level World.</p>
- </header>
-
- <section class="flex flex-col md:flex-row items-stretch min-h-screen px-6 py-12 gap-6">
- <div class="md:w-1/2 glass p-16 rounded-2xl shadow-lg max-h-screen overflow-y-scroll" data-aos="fade-right">
- <h2 class="text-7xl font-extrabold mb-4 text-center text-[#FFD700]">Registration Form</h2>
- <p class="text-center text-2xl mb-6">Fill out the details below to begin your learning journey with ProximaLMS</p>
- <form id="registerForm" class="grid grid-cols-1 md:grid-cols-2 gap-8" onsubmit="return validatePasswords()">
-
- <div>
- <label class="block mb-2 font-semibold">Full Name</label>
- <input type="text" class="w-full p-3 rounded-lg border border-gray-400 text-black" placeholder="John Doe" required />
- </div>
-
- <div>
- <label class="block mb-2 font-semibold">Email Address</label>
- <input type="email" class="w-full p-3 rounded-lg border border-gray-400 text-black" placeholder="john@example.com" required />
- </div>
-
- <div>
- <label class="block mb-2 font-semibold">Phone Number</label>
- <input type="tel" class="w-full p-3 rounded-lg border border-gray-400 text-black" placeholder="+91 98765 43210" required />
- </div>
-
- <div>
- <label class="block mb-2 font-semibold">Date of Birth</label>
- <input type="date" class="w-full p-3 rounded-lg border border-gray-400 text-black" required />
- </div>
-
-
- <div>
- <label class="block mb-2 font-semibold">Password</label>
- <input type="password" id="password" class="w-full p-3 rounded-lg border border-gray-400 text-black" placeholder="Create a strong password" required />
- <p id="passwordMessage" class="text-sm mt-1"></p>
- </div>
-
-
- <div>
- <label class="block mb-2 font-semibold">Confirm Password</label>
- <input type="password" id="confirmPassword" class="w-full p-3 rounded-lg border border-gray-400 text-black" placeholder="Re-enter password" required />
- </div>
-
- <div>
- <label class="block mb-2 font-semibold">Preferred Language</label>
- <select class="w-full p-3 rounded-lg border border-gray-400 text-black">
- <option>English</option>
- <option>Hindi</option>
- <option>Telugu</option>
- <option>Other</option>
- </select>
- </div>
-
- <div>
- <label class="block mb-2 font-semibold">Course of Interest</label>
- <input type="text" class="w-full p-3 rounded-lg border border-gray-400 text-black" placeholder="e.g., Data Science, AI, Web Dev" />
- </div>
-
- <div class="md:col-span-2">
- <label class="block mb-2 font-semibold">Why do you want to join ProximaLMS?</label>
- <textarea class="w-full p-4 rounded-lg border border-gray-400 text-black h-32" placeholder="Describe your motivation..."></textarea>
- </div>
- <div class="md:col-span-2 flex items-center">
- <input type="checkbox" id="terms" class="mr-2" required>
- <label for="terms" class="text-sm">I agree to the <a href="#" class="text-[#FFD700] hover:underline">Terms and Conditions</a>.</label>
- </div>
-
- <div class="md:col-span-2">
- <button type="submit" class="w-full bg-[#FFD700] text-black p-4 rounded-lg font-bold text-xl hover:bg-[#FFC700] transition-all">
- Register Now
- </button>
- </div>
-
- </form>
- </div>
-
- <div class="md:w-1/2 glass p-12 rounded-xl shadow-lg flex flex-col justify-between" data-aos="fade-left">
- <div class="bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 rounded-lg p-10 text-white">
- <h2 class="text-5xl font-extrabold mb-8 text-center">Request a Demo</h2>
- <form class="space-y-6" onsubmit="return handleDemoForm(event)">
- <input type="text" placeholder="Full Name" class="w-full p-5 rounded-lg border border-gray-300 text-black text-lg" required>
- <input type="email" placeholder="Email Address" class="w-full p-5 rounded-lg border border-gray-300 text-black text-lg" required>
- <input type="text" placeholder="Subject" class="w-full p-5 rounded-lg border border-gray-300 text-black text-lg" required>
- <textarea placeholder="Your Message" class="w-full p-5 rounded-lg border border-gray-300 text-black text-lg" rows="4" required></textarea>
- <button onclick="document.getElementById('demoCalendar').classList.toggle('hidden')" type="button" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-400 transition-all">Book Appointment</button>
- <input type="datetime-local" id="demoCalendar" class="w-full p-5 rounded-lg border border-gray-300 text-black text-lg hidden" required>
- <button type="submit" class="w-full bg-[#FFD700] hover:bg-[#FFC700] text-black text-2xl font-bold py-4 rounded-lg transition">Send Message</button>
- </form>
- <p class="text-center text-white mt-8 mb-4 text-xl font-semibold">Already have an account?</p>
- <a href="login.html" class="block w-full bg-[#FFD700] hover:bg-[#FFC700] text-black text-2xl font-bold py-4 rounded-lg transition text-center">
- Login
- </a>
- </div>
- </div>
- </section> -->
-
-
-<!-- <div class="flex justify-center mt-16" data-aos="zoom-in" data-aos-delay="400">
- <a href="https://kalpracademy.com/" target="_blank"
- class="tooltip-container glass p-12 rounded-3xl text-center relative collab-hover scale-105 sm:scale-110 lg:scale-125 hover:scale-130 transition-transform duration-500 w-full max-w-4xl">
- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUCqENDlAXxgHWH_4_UXRBsROsljjRE1Te7g&s"
- alt="Kalpra Academy Logo"
- class="mx-auto h-28 mb-6 animate-bounce" />
- <h3 class="text-3xl font-extrabold text-[#FFD700] mb-4 transition-transform duration-300">Kalpra Academy</h3>
- <p class="text-lg text-white leading-relaxed px-4">
- Empowering the future through AI-integrated education, transforming learners into innovators of tomorrow.
- </p>
- <span class="tooltip">Kalpra Academy - Bridging Futures with AI and Edu-Tech</span>
- </a>
- </div> -->
-
 <!-- PREMIUM CTA SECTION -->
 <section class="relative bg-white text-black py-20 px-6 md:px-20 overflow-hidden">
   <!-- Background Glow -->
@@ -557,10 +486,30 @@
   </div>
 
   <!-- Divider -->
-  <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
-    &copy; 2025 ProximaLMS. All rights reserved.
-  </div>
+  <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm pb-6">
+  <p>
+    <i class="fa-solid fa-copyright mr-1 text-[#FF6B22]"></i>
+    <span id="current-year"></span>
+    <span class="text-[#FF6B22] font-semibold">ProximaLMS</span>. All rights reserved.
+  </p>
+</div>
+
+<script>
+  // Set current year automatically
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+
+
+
 </footer>
+
+<!-- Scroll to Top Button (Square) -->
+<button id="scrollToTopBtn"
+  class="fixed bottom-6 right-6 z-50 bg-[#FF6B22] text-white w-10 h-10 shadow-xl hover:bg-[#e65a1b] transition-all duration-300 hidden"
+  aria-label="Scroll to top">
+  <i class="fa-solid fa-angle-up text-2xl"></i>
+</button>
 
 
 
@@ -571,5 +520,6 @@
  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  <script>AOS.init();</script>
  <script src="/Scripts/mobilenav.js"></script>
+ <script src="/Scripts/scrolltotop.js"></script>
  </body>
 </html>
