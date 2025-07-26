@@ -1,66 +1,37 @@
- const filterBtns = document.querySelectorAll('.filter-btn');
- const cards = document.querySelectorAll('.course-card');
- const readMoreBtns = document.querySelectorAll('.read-more-btn');
 
- // Function to apply stagger animation on initial load and filter changes
- const applyStaggerAnimation = (elements) => {
- elements.forEach((el, index) => {
- el.classList.remove('slide-in-up'); // Remove to re-apply animation
- el.style.animationDelay = `${index * 80}ms`;
- el.classList.add('slide-in-up');
- });
- };
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const courseCards = document.querySelectorAll(".course-card");
 
- // Initial stagger animation on page load
- document.addEventListener('DOMContentLoaded', () => {
- applyStaggerAnimation(cards);
- });
+  filterButtons.forEach(button => {
+    // Set initial background classes
+    const bg = button.dataset.bg.split(" ");
+    button.classList.add(...bg);
 
- filterBtns.forEach(btn => {
- btn.addEventListener('click', () => {
- // Remove active state from all buttons
- filterBtns.forEach(b => b.classList.remove('bg-professional-yellow', 'hover:bg-professional-yellow-darker', 'text-black'));
- filterBtns.forEach(b => {
- if (b.dataset.filter === 'beginner') b.classList.add('bg-purple-600', 'hover:bg-purple-700', 'text-white');
- else if (b.dataset.filter === 'intermediate') b.classList.add('bg-blue-600', 'hover:bg-blue-700', 'text-white');
- else if (b.dataset.filter === 'advanced') b.classList.add('bg-green-600', 'hover:bg-green-700', 'text-white');
- });
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
 
- // Add active state to clicked button
- btn.classList.remove('bg-purple-600', 'bg-blue-600', 'bg-green-600', 'hover:bg-purple-700', 'hover:bg-blue-700', 'hover:bg-green-700', 'text-white');
- btn.classList.add('bg-professional-yellow', 'hover:bg-professional-yellow-darker', 'text-black');
+      // Show/hide courses
+      courseCards.forEach(card => {
+        card.style.display = (filter === "all" || card.dataset.level === filter) ? "block" : "none";
+      });
 
- const filter = btn.dataset.filter;
- let visibleCards = [];
+      // Reset all buttons to original background
+      filterButtons.forEach(btn => {
+        btn.classList.remove("ring-4", "ring-white", "scale-105");
 
- cards.forEach(card => {
- if (filter === 'all' || card.dataset.level === filter) {
- card.classList.remove('hidden');
- visibleCards.push(card);
- } else {
- card.classList.add('hidden');
- }
- // Ensure details are hidden on filter change and remove animation class
- const details = card.querySelector('.course-details');
- details.classList.add('hidden');
- details.classList.remove('visible'); // Remove animation class
- card.querySelector('.read-more-btn').textContent = 'Read More';
- });
+        // Remove any bg-* or hover:bg-* classes
+        btn.classList.forEach(cls => {
+          if (cls.startsWith("bg-") || cls.startsWith("hover:bg-")) {
+            btn.classList.remove(cls);
+          }
+        });
 
- applyStaggerAnimation(visibleCards); // Apply stagger to visible cards
- });
- });
+        // Re-apply original background
+        const originalBg = btn.dataset.bg.split(" ");
+        btn.classList.add(...originalBg);
+      });
 
- readMoreBtns.forEach(btn => {
- btn.addEventListener('click', () => {
- const details = btn.closest('.course-card').querySelector('.course-details');
- details.classList.toggle('hidden');
- if (details.classList.contains('hidden')) {
- btn.textContent = 'Read More';
- details.classList.remove('visible'); // Remove animation class when hidden
- } else {
- btn.textContent = 'Show Less';
- details.classList.add('visible'); // Add animation class when visible
- }
- });
- });
+      // Highlight the active button
+      button.classList.add("ring-4", "ring-white", "scale-105");
+    });
+  });

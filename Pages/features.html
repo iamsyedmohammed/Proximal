@@ -60,24 +60,7 @@
   </div>
 </nav>
 
-<!-- JavaScript for toggle functionality -->
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const menuIcon = document.getElementById('menu-icon');
-  const mobileMenu = document.getElementById('mobile-menu');
 
-  menuBtn.addEventListener('click', () => {
-    // Toggle visibility
-    mobileMenu.classList.toggle('hidden');
-
-    // Toggle icon between ☰ and ✖
-    if (menuIcon.innerHTML === '☰' || menuIcon.innerHTML === '&#9776;') {
-      menuIcon.innerHTML = '✖';
-    } else {
-      menuIcon.innerHTML = '☰';
-    }
-  });
-</script>
 
 
 <section class="relative w-full h-[60vh] md:h-[75vh] pt-16 flex items-center bg-black text-white overflow-hidden">
@@ -194,7 +177,7 @@
       </p>
 
       <!-- Contact Info -->
-      <div class="space-y-3 text-sm text-gray-300">
+      <div class="space-y-3 text-base text-gray-400">
         <div class="flex items-center">
           <i class="fa-solid fa-phone text-[#FF6B22] mr-2"></i>
           <a href="tel:+12819425455" class="hover:text-[#FF6B22]">+1 281-942-5455</a>
@@ -269,7 +252,7 @@
     <!-- Address Only -->
     <div>
       <h3 class="text-xl font-semibold mb-4">Office Locations</h3>
-      <ul class="space-y-5 text-gray-300 mb-6 text-sm leading-relaxed">
+      <ul class="space-y-5 text-gray-400 mb-6 text-base leading-relaxed">
         <!-- USA Address -->
         <li class="flex items-start">
           <i class="fas fa-map-marker-alt text-[#FF6B22] mt-1 mr-3 text-lg"></i>
@@ -299,6 +282,7 @@
 
  <!-- JavaScript for staggered scroll-animate (Intersection Observer) -->
   <script src="/Scripts/features.js"></script>
+  <script src="/Scripts/mobilenav.js"></script>
 
 </body>
 </html>

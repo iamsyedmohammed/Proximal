@@ -59,24 +59,7 @@
   </div>
 </nav>
 
-<!-- JavaScript for toggle functionality -->
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const menuIcon = document.getElementById('menu-icon');
-  const mobileMenu = document.getElementById('mobile-menu');
 
-  menuBtn.addEventListener('click', () => {
-    // Toggle visibility
-    mobileMenu.classList.toggle('hidden');
-
-    // Toggle icon between ☰ and ✖
-    if (menuIcon.innerHTML === '☰' || menuIcon.innerHTML === '&#9776;') {
-      menuIcon.innerHTML = '✖';
-    } else {
-      menuIcon.innerHTML = '☰';
-    }
-  });
-</script>
 
 <section class="relative w-full h-[60vh] md:h-[75vh] pt-16 flex items-center bg-black text-white overflow-hidden">
 
@@ -98,7 +81,6 @@
   </div>
 
 </section>
-
 
 
  <section class="min-h-screen p-10">
@@ -243,7 +225,7 @@
       </p>
 
       <!-- Contact Info -->
-      <div class="space-y-3 text-sm text-gray-300">
+      <div class="space-y-3 text-base text-gray-400">
         <div class="flex items-center">
           <i class="fa-solid fa-phone text-[#FF6B22] mr-2"></i>
           <a href="tel:+12819425455" class="hover:text-[#FF6B22]">+1 281-942-5455</a>
@@ -317,8 +299,8 @@
 
     <!-- Address Only -->
     <div>
-<h3 class="text-xl font-semibold mb-4">Office Locations</h3>
-      <ul class="space-y-5 text-gray-300 mb-6 text-sm leading-relaxed">
+      <h3 class="text-xl font-semibold mb-4">Office Locations</h3>
+      <ul class="space-y-5 text-gray-400 mb-6 text-base leading-relaxed">
         <!-- USA Address -->
         <li class="flex items-start">
           <i class="fas fa-map-marker-alt text-[#FF6B22] mt-1 mr-3 text-lg"></i>
@@ -347,44 +329,8 @@
 </footer>
 
 <script src="/Scripts/courses.js"></script>
-<script>
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const courseCards = document.querySelectorAll(".course-card");
+<script src="/Scripts/mobilenav.js"></script>
 
-  filterButtons.forEach(button => {
-    // Set initial background classes
-    const bg = button.dataset.bg.split(" ");
-    button.classList.add(...bg);
-
-    button.addEventListener("click", () => {
-      const filter = button.dataset.filter;
-
-      // Show/hide courses
-      courseCards.forEach(card => {
-        card.style.display = (filter === "all" || card.dataset.level === filter) ? "block" : "none";
-      });
-
-      // Reset all buttons to original background
-      filterButtons.forEach(btn => {
-        btn.classList.remove("ring-4", "ring-white", "scale-105");
-
-        // Remove any bg-* or hover:bg-* classes
-        btn.classList.forEach(cls => {
-          if (cls.startsWith("bg-") || cls.startsWith("hover:bg-")) {
-            btn.classList.remove(cls);
-          }
-        });
-
-        // Re-apply original background
-        const originalBg = btn.dataset.bg.split(" ");
-        btn.classList.add(...originalBg);
-      });
-
-      // Highlight the active button
-      button.classList.add("ring-4", "ring-white", "scale-105");
-    });
-  });
-</script>
 
 
 
