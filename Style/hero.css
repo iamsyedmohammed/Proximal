@@ -156,8 +156,12 @@
         font-size: 2em;
       }
 
-      .hero-image {
-       display: none;
+   .hero-image {
+    display: block; /* <-- SHOWS the image again */
+    margin-top: 20px;
+    width: 100%; /* Adjust as needed */
+    max-width: 300px; /* Optional: Control size */
+    
       }
 
       .impact-grid {
